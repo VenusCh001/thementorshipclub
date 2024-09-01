@@ -109,6 +109,7 @@ section#services h2 {
 section#team {
     padding: 50px 20px;
     text-align: center;
+    background-color:blanchedalmond;
 }
 
 section#team h2 {
@@ -170,6 +171,31 @@ section#team h2 {
     color: #ff5722;
 }
 
+section#about-us{
+    padding: 80px 80px;
+    text-align: center;
+    background-color:cornsilk
+
+}
+section#about-us h2{
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ff5722;
+}
+.about-us-container{
+    display:flex;
+    max-width: 700px;
+    margin:auto;
+    justify-content: space-around;
+    text-align: justify;
+    background-color: white;
+    padding: 18px;
+}
+.about-us-container img{
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+}
 section#contact {
     padding: 50px 20px;
     background-color: #f4f4f4;

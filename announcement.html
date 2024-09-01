@@ -6,13 +6,37 @@
     <title>Mentorship Club Announcements</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        body {
+
+body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
+nav{
+    margin-top:20px;
+    margin-left: 7.5%;
+}
 
+nav a {
+    text-decoration: none;
+    text-align: center;
+    background-color: lightsalmon;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ff5722;
+    color: #fff;
+}
+.main-heading{
+    text-align: center;
+color:#ff5722;
+}
 .announcement-container {
     max-width: 800px;
     margin: 40px auto;
@@ -28,13 +52,13 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    padding: 10px;
 }
 
 .announcement-card img {
     max-width: 150px;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    object-fit: cover;
+    margin:auto;
+  
 }
 
 .announcement-content {
@@ -63,7 +87,7 @@
 .read-more {
     display: inline-block;
     padding: 10px 15px;
-    background-color: #007bff;
+    background-color: #ff5722;
     color: #fff;
     text-decoration: none;
     border-radius: 4px;
@@ -72,39 +96,62 @@
 .read-more:hover {
     background-color: #0056b3;
 }
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+}
 </style>
 </head>
 <body>
+
+    <header>
+        <nav>
+           <a href="./index.html">Home</a></li>
+        </nav>
+    </header>
+
+    <h2 class="main-heading">Latest Announcements</h2>
     <div class="announcement-container">
         <div class="announcement-card">
-            <img src="hacktoberfest.jpg" alt="Hacktoberfest Announcement">
+            <img src="./assets/speakericon.png" alt="guest webinar">
             <div class="announcement-content">
-                <h2>MLH Partners with DigitalOcean’s 10th Hacktoberfest for Global Hack Week: Open Source</h2>
-                <p>From October 16th-23rd, DigitalOcean will be partnering with MLH for Global Hack Week: Open Source in honor of Hacktoberfest taking place the entire month of October.</p>
-                <span>Posted by Fiona Whittington | September 1st, 2023</span>
+                <h2>Special Guest Webinar: Breaking Into Tech – Tips from Industry Leaders</h2>
+                <p>Join us for an exclusive webinar featuring industry leaders who have successfully navigated their way into the tech world. They'll share their personal experiences, challenges, and tips on how you can break into the industry too. 
+                    This is a unique opportunity to hear directly from professionals who've been where you are and are now making their mark in the tech field.</p>
+                <span>Posted by Venus Chaudhary | September 1st, 2024</span>
                 <a href="#" class="read-more">Read More</a>
             </div>
         </div>
 
         <div class="announcement-card">
-            <img src="mlh-top50.jpg" alt="MLH Top 50">
+            <img src="./assets/laptopicon.png" alt="mentorship cohort">
             <div class="announcement-content">
-                <h2>Introducing the MLH Top 50 Class for 2023!</h2>
-                <p>We carefully selected 50 outstanding members from our community, and we can't wait to share their inspiring stories with all of you!</p>
-                <span>Posted by Harshita Sharma | August 4th, 2023</span>
+                <h2>Announcing the 2024 Mentorship Cohort: Meet Your Mentors and Peers!</h2>
+                <p>We're thrilled to introduce the 2024 Mentorship Cohort! This year's cohort is filled with passionate individuals eager to 
+                    learn and grow together. You'll be paired with industry professionals who will guide you 
+                    through your journey, providing insights, feedback, and support.</p>
+                <span>Posted by Venus Chaudhary | September 1st, 2024</span>
                 <a href="#" class="read-more">Read More</a>
             </div>
         </div>
 
         <div class="announcement-card">
-            <img src="mlh-fellowship.jpg" alt="MLH Fellowship">
+            <img src="./assets/image.png" alt="Workshop series">
             <div class="announcement-content">
-                <h2>Everything You Need to Know About the MLH Fellowship Fall 2023 Program</h2>
-                <p>The MLH Fellowship will be back again this school year! Get an overview of everything you need to know about this semester.</p>
-                <span>Posted by [Author Name] | [Date]</span>
+                <h2>Web Development Workshop Series: Build and Deploy Your First Website</h2>
+                <p>Have you ever wanted to build your own website? Our Web Development Workshop Series is here to help you turn that dream into reality. 
+                    Over the course of this series, you'll learn the basics of HTML, CSS, and JavaScript, and by the end, 
+                    you'll have a fully functional website to showcase..</p>
+                <span>Posted by Venus Chaudhary | August 31st, 2024</span>
                 <a href="#" class="read-more">Read More</a>
             </div>
         </div>
     </div>
+
+    <footer>
+        <p>&copy; 2024 The mentorship Club. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>

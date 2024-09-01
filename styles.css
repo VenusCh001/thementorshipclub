@@ -9,6 +9,7 @@ header {
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
+    margin-top: 15px;
 }
 
 nav ul {
@@ -39,6 +40,7 @@ nav ul li a:hover {
 
 section#home {
     text-align: center;
+    margin-top: 20px;
     padding: 100px 20px;
     background-color: #ff5722;
     color: #fff;

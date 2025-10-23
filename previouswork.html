@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>previous work</title>
     <style>
-        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -14,80 +18,200 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
-nav{
-    margin-top:20px;
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+nav {
+    margin-top: 20px;
     margin-left: 7.5%;
+    animation: slideInLeft 0.6s ease-out;
 }
 
 nav a {
     text-decoration: none;
     text-align: center;
-    background-color: lightsalmon;
+    background: linear-gradient(135deg, #ffa07a 0%, #ff8c69 100%);
     color: #333;
     font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+nav a:hover::before {
+    left: 100%;
 }
 
 nav a:hover {
-    background-color: #ff5722;
+    background: linear-gradient(135deg, #ff5722 0%, #ff7043 100%);
     color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 87, 34, 0.4);
 }
+
 .section {
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 100vh;
-    padding: 50px;
+    padding: 80px 50px;
     background-color: #f4f7fa;
     color: #333;
-    transition: background-color 0.5s;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: float 8s ease-in-out infinite;
 }
 
 .content {
     max-width: 500px;
+    z-index: 1;
+    animation: slideInLeft 0.8s ease-out;
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 3.5em;
     margin-bottom: 0.5em;
+    background: linear-gradient(135deg, #ff5722 0%, #ff7043 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin-bottom: 1em;
+    line-height: 1.7;
+}
+
+.illustration {
+    z-index: 1;
+    animation: slideInRight 0.8s ease-out;
 }
 
 .illustration img {
     max-width: 700px;
     height: auto;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.illustration img:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 20px 60px rgba(255, 87, 34, 0.4);
 }
 
 #summer-cohort {
-    background-color: #f0f8ff;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
 }
 
 #winter-cohort {
-    background-color: #e6e6fa;
+    background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
 }
 
 #hackathon-throwback {
-    background-color: #ffe4e1;
-}
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #333;
-    color: #fff;
+    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
 }
 
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: #fff;
+    font-size: 16px;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+footer p {
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+    
+    h1 {
+        font-size: 2.5em;
+    }
+    
+    .illustration img {
+        max-width: 100%;
+    }
+}
     </style>
 </head>
 <body>
     <header>
         <nav>
-           <a href="./index.html">Home</a></li>
+           <a href="./index.html">Home</a>
         </nav>
     </header>
     <section class="section" id="summer-cohort">
@@ -129,8 +253,7 @@ footer {
     </section>
 
     <footer>
-        <p>&copy; 2024 The mentorship Club. All Rights Reserved.</p>
+        <p>&copy; 2025 The mentorship Club. All Rights Reserved.</p>
     </footer>
-    
 </body>
 </html>

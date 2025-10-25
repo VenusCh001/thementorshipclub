@@ -157,16 +157,6 @@ nav ul li a:hover::after {
     overflow: hidden;
 }
 
-#home::before {
-    content: '';
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(255, 87, 34, 0.08) 0%, transparent 70%);
-    top: -250px;
-    right: -250px;
-    animation: float 20s ease-in-out infinite;
-}
 
 @keyframes float {
 

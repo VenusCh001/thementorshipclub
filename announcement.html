@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mentorship Club Announcements</title>
     <link rel="stylesheet" href="styles.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
@@ -12,147 +13,64 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
     <style>
+
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #DEAC80 0%, #d4a574 100%);
+    background-color: #DEAC80;
     margin: 0;
     padding: 0;
 }
-
-header {
-    background: linear-gradient(135deg, #DEAC80 0%, #d4a574 100%);
-    animation: slideInLeft 0.6s ease-out;
+header{
+    background-color: #DEAC80;
 }
-
-nav {
+nav{
     margin-left: 7.5%;
-    padding: 20px 0;
 }
 
 nav a {
     text-decoration: none;
     text-align: center;
-    background: linear-gradient(135deg, #ffa07a 0%, #ff8c69 100%);
+    background-color: lightsalmon;
     color: #333;
     font-weight: bold;
-    padding: 12px 24px;
-    border-radius: 8px;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-}
-
-nav a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: left 0.5s;
-}
-
-nav a:hover::before {
-    left: 100%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-    background: linear-gradient(135deg, #ff5722 0%, #ff7043 100%);
+    background-color: #ff5722;
     color: #fff;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255, 87, 34, 0.4);
 }
-
-.main-heading {
+.main-heading{
     text-align: center;
-    color: #914F1E;
-    font-size: 42px;
-    margin: 40px 0;
-    position: relative;
-    display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: fadeInUp 0.8s ease-out;
+color:#914F1E;
 }
-
-.main-heading::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, #914F1E, #b8652a);
-    border-radius: 2px;
-}
-
 .announcement-container {
-    max-width: 900px;
+    max-width: 800px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
 .announcement-card {
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-    border-radius: 16px;
+    background-color: #fff;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 20px;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    animation: fadeInUp 0.8s ease-out;
-    animation-fill-mode: both;
-    position: relative;
-    overflow: hidden;
+    padding: 10px;
 }
-
-.announcement-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(255, 87, 34, 0.05) 0%, rgba(255, 112, 67, 0.05) 100%);
-    opacity: 0;
-    transition: opacity 0.4s;
-}
-
-.announcement-card:hover::before {
-    opacity: 1;
-}
-
-.announcement-card:nth-child(1) {
-    animation-delay: 0.2s;
-}
-
-.announcement-card:nth-child(2) {
-    animation-delay: 0.4s;
-}
-
-.announcement-card:nth-child(3) {
-    animation-delay: 0.6s;
-}
-
 .announcement-card:hover {
-    transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 15px 40px rgba(255, 87, 34, 0.3);
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
 }
-
 .announcement-card img {
     max-width: 150px;
-    margin: auto;
-    transition: transform 0.4s ease;
-}
-
-.announcement-card:hover img {
-    transform: scale(1.1) rotate(5deg);
+    margin:auto;
+  
 }
 
 .announcement-content {
@@ -160,123 +78,53 @@ nav a:hover {
 }
 
 .announcement-content h2 {
-    font-size: 22px;
+    font-size: 20px;
     color: #333;
-    margin: 0 0 15px;
-    transition: color 0.3s;
-}
-
-.announcement-card:hover .announcement-content h2 {
-    color: #ff5722;
+    margin: 0 0 10px;
 }
 
 .announcement-content p {
     font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
+  font-optical-sizing: auto;
     font-size: 16px;
     color: #666;
     margin: 0 0 15px;
-    line-height: 1.7;
 }
 
 .announcement-content span {
     display: block;
     font-family: "Roboto Condensed", sans-serif;
-    font-optical-sizing: auto;
+  font-optical-sizing: auto;
     font-size: 14px;
     color: #999;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .read-more {
     display: inline-block;
-    padding: 12px 24px;
-    background: linear-gradient(135deg, #ff5722 0%, #ff7043 100%);
+    padding: 10px 15px;
+    background-color: #ff5722;
     color: #fff;
     text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-    font-weight: bold;
-}
-
-.read-more::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
-}
-
-.read-more:hover::before {
-    width: 300px;
-    height: 300px;
+    border-radius: 4px;
 }
 
 .read-more:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255, 87, 34, 0.4);
+    background-color: #0056b3;
 }
-
 footer {
     text-align: center;
-    padding: 30px 0;
-    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    padding: 20px 0;
+    background-color: #333;
     color: #fff;
-    font-size: 16px;
-    margin-top: 40px;
-    animation: slideInRight 0.6s ease-out;
-}
-
-footer p {
-    margin: 0;
-    letter-spacing: 0.5px;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
 </style>
 </head>
 <body>
+
     <header>
         <nav>
-           <a href="./index.html">Home</a>
+           <a href="./index.html">Home</a></li>
         </nav>
     </header>
 
@@ -319,7 +167,7 @@ footer p {
     </div>
 
     <footer>
-        <p>&copy; 2025 The mentorship Club. All Rights Reserved.</p>
+        <p>&copy; 2024 The mentorship Club. All Rights Reserved.</p>
     </footer>
 </body>
 </html>

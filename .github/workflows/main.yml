@@ -27,7 +27,10 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
+        
+      - name: Install GitHub CLI
+        run: sudo apt-get install -y gh
+        
       - name: Update GitHub Release with deployed link
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -36,3 +39,5 @@ jobs:
         run: |
           DEPLOY_URL="https://${{ github.repository_owner }}.github.io/${REPO##*/}/${VERSION}/"
           gh release edit "$VERSION" --repo "$REPO" --notes "🚀 Live demo: $DEPLOY_URL"
+
+

@@ -20,7 +20,7 @@
             <div class="logo">
                 <span>The Mentorship Club</span>
             </div>
-            <ul>
+            <ul class="mobile-nav">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about-us">About Us</a></li>
                 <li><a href="#services">Services</a></li>
@@ -316,6 +316,22 @@
             e.preventDefault();
             alert('Thank you for reaching out! We will get back to you soon.');
             e.target.reset();
+        });
+
+        // Mobile menu toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.mobile-nav');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenu.classList.toggle('open');
+        });
+
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenu.classList.remove('open');
+            });
         });
     </script>
 </body>

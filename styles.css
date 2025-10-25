@@ -55,7 +55,7 @@ nav {
     gap: 0.8rem;
     font-size: 1.5rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #780f0f, #be5050);
+    background: #ff5722;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -216,10 +216,7 @@ nav ul li a:hover::after {
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, var(--text-dark) 0%, var(--primary-color) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #ff5722;
     animation: fadeInUp 1s ease 0.4s backwards;
 }
 
@@ -264,7 +261,7 @@ nav ul li a:hover::after {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #f16363, #b73535);
+    background: #b73535;
     transition: left 0.3s ease;
 }
 
@@ -715,10 +712,7 @@ footer {
     gap: 0.8rem;
     font-size: 1.5rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #353bb7, #5055be);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #ff5722;
     margin-bottom: 1.5rem;
 }
 

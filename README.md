@@ -23,11 +23,11 @@ thementorshipclub/
 ├── README.md                  # Project documentation
 ├── CONTRIBUTING.md            # Contribution guidelines
 ├── TODO.md                    # Task list
-├── css/
+├── styles/
 │   ├── styles.css             # Main stylesheet
 │   ├── previouswork.css       # Styles for previous work page
 │   └── announcement.css       # Styles for announcement page
-├── js/
+├── scripts/
 │   └── script.js              # Main JavaScript file
 └── assets/
     ├── icons/                 # Service and UI icons

@@ -1,136 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>previous work</title>
-    <style>
-        
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-nav{
-    margin-top:20px;
-    margin-left: 7.5%;
-}
-
-nav a {
-    text-decoration: none;
-    text-align: center;
-    background-color: lightsalmon;
-    color: #333;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: #ff5722;
-    color: #fff;
-}
-.section {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 100vh;
-    padding: 50px;
-    background-color: #f4f7fa;
-    color: #333;
-    transition: background-color 0.5s;
-}
-
-.content {
-    max-width: 500px;
-}
-
-h1 {
-    font-size: 3em;
-    margin-bottom: 0.5em;
-}
-
-p {
-    font-size: 1.2em;
-    margin-bottom: 1em;
-}
-
-.illustration img {
-    max-width: 700px;
-    height: auto;
-}
-
-#summer-cohort {
-    background-color: #f0f8ff;
-}
-
-#winter-cohort {
-    background-color: #e6e6fa;
-}
-
-#hackathon-throwback {
-    background-color: #ffe4e1;
-}
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #333;
-    color: #fff;
-}
-
-    </style>
+    <title>Previous Work - The Mentorship Club</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/previouswork.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
-    <header>
+    <header id="navbar">
         <nav>
-           <a href="./index.html">Home</a></li>
+            <div class="logo">
+                <span>The Mentorship Club</span>
+            </div>
+            <ul class="mobile-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about-us">About Us</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="previouswork.html" target="_blank">Previous Work</a></li>
+                <li><a href="announcement.html" target="_blank">Announcements</a></li>
+                <li><a href="index.html#team">Mentors</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
-    <section class="section" id="summer-cohort">
-        <div class="content">
-            <h1>Summer Cohort</h1>
-            <p>Empowering Innovators, Shaping the Future</p>
-            <p>The Summer Cohort cultivated a dynamic environment where creativity met technology, 
-                resulting in groundbreaking projects that pushed the boundaries of coding.</p>
-        </div>
-        <div class="illustration">
-            <img src="./assets/ai-generated-8702864_1280.png" alt="Summer Cohort Illustration">
-        </div>
+
+    <section class="hero-section">
+        <div class="hero-badge">✨ Our Legacy of Excellence</div>
+        <h1>Our Journey So Far</h1>
+        <p>From inspiring cohorts to groundbreaking competitions, explore the milestones that have shaped our community
+            and empowered countless innovators along the way.</p>
     </section>
 
-    <section class="section" id="winter-cohort">
-        <div class="content">
-            <h1>Winter Cohort</h1>
-            <p>Fostering Collaboration, Driving Excellence</p>
-            <p>The Winter Cohort united talented individuals, 
-                sparking meaningful collaborations that led to 
-                significant advancements in software development.
-            </p>
-        </div>
-        <div class="illustration">
-            <img src="./assets/8576717.jpg" alt="Winter Cohort Illustration">
-        </div>
-    </section>
+    <section class="timeline-section">
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <img src="./assets/ai-generated-8702864_1280.png" alt="Summer Cohort" class="timeline-image">
+                    <div class="timeline-text-content">
+                        <span class="timeline-date">Summer 2024</span>
+                        <h2>Summer Cohort</h2>
+                        <h3>Empowering Innovators, Shaping the Future</h3>
+                        <p>The Summer Cohort cultivated a dynamic environment where creativity met technology, resulting in
+                            groundbreaking projects that pushed the boundaries of coding. Participants collaborated on
+                            real-world challenges, developing solutions that showcased their technical prowess and
+                            innovative thinking.</p>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Participants</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">15</span>
+                                <span class="stat-label">Projects</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">8 Weeks</span>
+                                <span class="stat-label">Duration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <section class="section" id="hackathon-throwback">
-        <div class="content">
-            <h1>competitions conducted</h1>
-            <p>Challenging Minds, Igniting Innovation</p>
-            <p>Our past hackathons set the stage for innovation, 
-                where participants solved complex problems and showcased their exceptional coding skills.</p>
-        </div>
-        <div class="illustration">
-            <img src="./assets/10693998.jpg" alt="Hackathon Illustration">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <img src="./assets/8576717.jpg" alt="Winter Cohort" class="timeline-image">
+                    <div class="timeline-text-content">
+                        <span class="timeline-date">Winter 2024</span>
+                        <h2>Winter Cohort</h2>
+                        <h3>Fostering Collaboration, Driving Excellence</h3>
+                        <p>The Winter Cohort united talented individuals, sparking meaningful collaborations that led to
+                            significant advancements in software development. Through intensive mentorship and peer
+                            learning, participants mastered advanced concepts and built production-ready applications.</p>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <span class="stat-number">65+</span>
+                                <span class="stat-label">Participants</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">20</span>
+                                <span class="stat-label">Projects</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">10 Weeks</span>
+                                <span class="stat-label">Duration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <img src="./assets/10693998.jpg" alt="Competitions" class="timeline-image">
+                    <div class="timeline-text-content">
+                        <span class="timeline-date">Throughout 2024</span>
+                        <h2>Competitions Conducted</h2>
+                        <h3>Challenging Minds, Igniting Innovation</h3>
+                        <p>Our past hackathons and coding contests set the stage for innovation, where participants solved
+                            complex problems and showcased their exceptional coding skills. From ideathons to full-scale
+                            hackathons, these events fostered a competitive yet collaborative spirit that brought out the
+                            best in everyone.</p>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <span class="stat-number">200+</span>
+                                <span class="stat-label">Participants</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">8</span>
+                                <span class="stat-label">Events</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Prizes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 The mentorship Club. All Rights Reserved.</p>
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <span>The Mentorship Club</span>
+                </div>
+                <p>Empowering the next generation of leaders through personalized mentorship, collaborative learning,
+                    and hands-on experience.</p>
+                <div class="footer-social">
+                    <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about-us">About Us</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#team">Our Mentors</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Programs</h4>
+                <ul>
+                    <li><a href="#">Mentorship Cohorts</a></li>
+                    <li><a href="#">Hackathons</a></li>
+                    <li><a href="#">Coding Contests</a></li>
+                    <li><a href="#">Learning Sessions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="previouswork.html">Previous Work</a></li>
+                    <li><a href="announcement.html">Announcements</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 The Mentorship Club. All Rights Reserved. Crafted with passion for mentorship.</p>
+        </div>
     </footer>
-    
+
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Timeline animations
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px',
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        if (timelineItems.length > 0) {
+            setTimeout(() => {
+                timelineItems[0].classList.add('visible');
+            }, 100);
+        }
+        timelineItems.forEach((el, index) => {
+            if (index > 0) {
+                observer.observe(el);
+            }
+        });
+        // Mobile menu toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.mobile-nav');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenu.classList.toggle('open');
+        });
+
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenu.classList.remove('open');
+            });
+        });
+    </script>
 </body>
+
 </html>

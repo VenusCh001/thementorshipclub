@@ -440,6 +440,7 @@ nav ul li a:hover::after {
     height: 180px;
     border-radius: 20px;
     object-fit: cover;
+    object-position: top;
     border: 3px solid var(--primary-color);
     transition: transform 0.4s ease;
 }
@@ -527,7 +528,7 @@ nav ul li a:hover::after {
     position: relative;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    max-width: 800px;
+    max-width: 700px;
 }
 
 .about-content::before {
@@ -546,10 +547,11 @@ nav ul li a:hover::after {
 }
 
 .about-image img {
-    width: 250px;
-    height: 250px;
+    width: 180px;
+    height: 180px;
     border-radius: 20px;
     object-fit: cover;
+    object-position: top;
     border: 3px solid var(--primary-color);
     box-shadow: 0 20px 60px rgba(255, 87, 34, 0.3);
     transition: transform 0.4s ease;
@@ -576,7 +578,7 @@ nav ul li a:hover::after {
     color: var(--primary-color);
     font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -589,7 +591,7 @@ nav ul li a:hover::after {
 
 /* Contact Section */
 #contact {
-    padding: 6rem 5%;
+    padding: 4rem 5%;
     background: #ECFFE6;
 }
 
@@ -608,7 +610,7 @@ nav ul li a:hover::after {
     max-width: 500px;
     margin: 0 auto;
     background: var(--card-bg);
-    border-radius: 30px;
+    border-radius: 20px;
     padding: 2rem;
     border: 1px solid var(--border-color);
     margin-top: 4rem;
@@ -616,7 +618,7 @@ nav ul li a:hover::after {
 }
 
 .contact-container h3 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: 1rem;
     text-align: center;
@@ -626,24 +628,24 @@ nav ul li a:hover::after {
 .contact-container>p {
     text-align: center;
     color: var(--text-gray);
-    margin-bottom: 3rem;
-    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .contact-form input,
 .contact-form textarea {
-    padding: 1.2rem 1.5rem;
+    padding: 1rem 1.2rem;
     background: var(--lighter-bg);
     border: 2px solid var(--border-color);
     border-radius: 15px;
     color: var(--text-dark);
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-family: 'SUSE', sans-serif;
     transition: all 0.3s ease;
 }
@@ -657,12 +659,12 @@ nav ul li a:hover::after {
 }
 
 .contact-form button {
-    padding: 1.2rem;
+    padding: 1rem;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
     border: none;
     border-radius: 15px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;

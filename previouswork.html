@@ -16,11 +16,18 @@
 </head>
 
 <body>
-  <!-- NAVBAR -->
-  <header id="navbar">
-    <nav>
-      <a href="index.html">Home</a>
-    </nav>
+  <!-- NAVBAR (fixed like announcement.html) -->
+  <header id="navbar" class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo">
+        <a href="index.html">The Mentorship Club</a>
+      </div>
+      <nav class="navbar-links">
+        <a href="index.html">Home</a>
+        <a href="announcement.html">Announcements</a>
+        <a href="previouswork.html" class="active">Previous Work</a>
+      </nav>
+    </div>
   </header>
 
   <!-- HERO SECTION -->
@@ -40,7 +47,7 @@
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-content">
-          <img src="./assets/previous-work/summer-cohort.png" alt="Summer Cohort" class="timeline-image">
+          <img src="assets/previous-work/summer-cohort.png" alt="Summer Cohort" class="timeline-image">
           <div class="timeline-text-content">
             <span class="timeline-date">Summer 2024</span>
             <h2>Summer Cohort</h2>
@@ -73,7 +80,7 @@
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-content">
-          <img src="./assets/previous-work/winter-cohort.jpg" alt="Winter Cohort" class="timeline-image">
+          <img src="assets/previous-work/winter-cohort.jpg" alt="Winter Cohort" class="timeline-image">
           <div class="timeline-text-content">
             <span class="timeline-date">Winter 2024</span>
             <h2>Winter Cohort</h2>
@@ -106,7 +113,7 @@
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-content">
-          <img src="./assets/previous-work/hackasthon.jpg" alt="Competitions" class="timeline-image">
+          <img src="assets/previous-work/hackasthon.jpg" alt="Competitions" class="timeline-image">
           <div class="timeline-text-content">
             <span class="timeline-date">Throughout 2024</span>
             <h2>Competitions Conducted</h2>
@@ -230,4 +237,5 @@
     });
   </script>
 </body>
+
 </html>

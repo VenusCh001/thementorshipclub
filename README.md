@@ -22,8 +22,12 @@ thementorshipclub/
 ├── announcement.html          # Announcements page
 ├── README.md                  # Project documentation
 ├── CONTRIBUTING.md            # Contribution guidelines
+<<<<<<< HEAD
 ├── TODO.md                    # Task list
 ├── styles/
+=======
+├── css/
+>>>>>>> b26c93827da44080df9f444122b3b47434d7e613
 │   ├── styles.css             # Main stylesheet
 │   ├── previouswork.css       # Styles for previous work page
 │   └── announcement.css       # Styles for announcement page

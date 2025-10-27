@@ -18,7 +18,7 @@
 
 body {
     font-family: 'SUSE', sans-serif;
-    background: white;
+    background: var(--light-bg);
     color: var(--text-dark);
     overflow-x: hidden;
 }
@@ -33,7 +33,7 @@ body {
     align-items: center;
     text-align: center;
     padding: 10rem 5% 4rem;
-    background: linear-gradient(#ffd8c9, #ffffff);
+    background: linear-gradient(180deg, var(--hero-gradient) 0%, var(--light-bg) 100%);
     position: relative;
     overflow: hidden;
 }
@@ -86,7 +86,7 @@ body {
     padding: 6rem 5%;
     padding-top: 0;
     max-width: 1200px;
-    background-color: white;
+    background-color: var(--light-bg);
     margin: 0 auto;
 }
 

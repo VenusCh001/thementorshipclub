@@ -17,18 +17,28 @@
 
 <body>
   <!-- NAVBAR (fixed like announcement.html) -->
-  <header id="navbar" class="navbar">
-    <div class="navbar-container">
-      <div class="navbar-logo">
-        <a href="index.html">The Mentorship Club</a>
-      </div>
-      <nav class="navbar-links">
-        <a href="index.html">Home</a>
-        <a href="announcement.html">Announcements</a>
-        <a href="previouswork.html" class="active">Previous Work</a>
-      </nav>
-    </div>
-  </header>
+  <header id="navbar">
+        <nav>
+            <div class="logo">
+                <span>The Mentorship Club</span>
+            </div>
+            <ul class="mobile-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about-us">About Us</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="previouswork.html" target="_blank">Previous Work</a></li>
+                <li><a href="announcement.html" target="_blank">Announcements</a></li>
+                <li><a href="index.html#team">Mentors</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <i class="fas fa-moon" id="theme-toggle"></i>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
   <!-- HERO SECTION -->
   <section class="hero-section">
@@ -71,79 +81,71 @@
                 <span class="stat-number">8 Weeks</span>
                 <span class="stat-label">Duration</span>
               </div>
+   
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <img src="./assets/8576717.jpg" alt="Winter Cohort" class="timeline-image">
+                    <div class="timeline-text-content">
+                        <span class="timeline-date">Winter 2024</span>
+                        <h2>Winter Cohort</h2>
+                        <h3>Fostering Collaboration, Driving Excellence</h3>
+                        <p>The Winter Cohort united talented individuals, sparking meaningful collaborations that led to
+                            significant advancements in software development. Through intensive mentorship and peer
+                            learning, participants mastered advanced concepts and built production-ready applications.</p>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <span class="stat-number">65+</span>
+                                <span class="stat-label">Participants</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">20</span>
+                                <span class="stat-label">Projects</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">10 Weeks</span>
+                                <span class="stat-label">Duration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <img src="./assets/10693998.jpg" alt="Competitions" class="timeline-image">
+                    <div class="timeline-text-content">
+                        <span class="timeline-date">Throughout 2024</span>
+                        <h2>Competitions Conducted</h2>
+                        <h3>Challenging Minds, Igniting Innovation</h3>
+                        <p>Our past hackathons and coding contests set the stage for innovation, where participants solved
+                            complex problems and showcased their exceptional coding skills. From ideathons to full-scale
+                            hackathons, these events fostered a competitive yet collaborative spirit that brought out the
+                            best in everyone.</p>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <span class="stat-number">200+</span>
+                                <span class="stat-label">Participants</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">8</span>
+                                <span class="stat-label">Events</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Prizes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- WINTER COHORT -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <img src="assets/previous-work/winter-cohort.jpg" alt="Winter Cohort" class="timeline-image">
-          <div class="timeline-text-content">
-            <span class="timeline-date">Winter 2024</span>
-            <h2>Winter Cohort</h2>
-            <h3>Fostering Collaboration, Driving Excellence</h3>
-            <p>
-              The Winter Cohort united talented individuals, sparking meaningful collaborations
-              that led to significant advancements in software development.
-              Through intensive mentorship and peer learning, participants mastered advanced concepts
-              and built production-ready applications.
-            </p>
-            <div class="stats">
-              <div class="stat-item">
-                <span class="stat-number">65+</span>
-                <span class="stat-label">Participants</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">20</span>
-                <span class="stat-label">Projects</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">10 Weeks</span>
-                <span class="stat-label">Duration</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- COMPETITIONS -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <img src="assets/previous-work/hackasthon.jpg" alt="Competitions" class="timeline-image">
-          <div class="timeline-text-content">
-            <span class="timeline-date">Throughout 2024</span>
-            <h2>Competitions Conducted</h2>
-            <h3>Challenging Minds, Igniting Innovation</h3>
-            <p>
-              Our past hackathons and coding contests set the stage for innovation,
-              where participants solved complex problems and showcased their exceptional coding skills.
-              From ideathons to full-scale hackathons, these events fostered a competitive yet
-              collaborative spirit that brought out the best in everyone.
-            </p>
-            <div class="stats">
-              <div class="stat-item">
-                <span class="stat-number">200+</span>
-                <span class="stat-label">Participants</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">8</span>
-                <span class="stat-label">Events</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">50+</span>
-                <span class="stat-label">Prizes</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
-
   <!-- FOOTER -->
   <footer>
     <div class="footer-content">
@@ -221,21 +223,51 @@
           entry.target.classList.add('visible');
           observer.unobserve(entry.target);
         }
-      });
-    }, observerOptions);
+        timelineItems.forEach((el, index) => {
+            if (index > 0) {
+                observer.observe(el);
+            }
+        });
+        // Mobile menu toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.mobile-nav');
 
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    if (timelineItems.length > 0) {
-      setTimeout(() => {
-        timelineItems[0].classList.add('visible');
-      }, 100);
-    }
-    timelineItems.forEach((el, index) => {
-      if (index > 0) {
-        observer.observe(el);
-      }
-    });
-  </script>
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenu.classList.toggle('open');
+        });
+
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenu.classList.remove('open');
+            });
+        });
+
+        // Dark/Light mode toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                themeToggle.classList.remove('fa-moon');
+                themeToggle.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark-mode');
+            } else {
+                themeToggle.classList.remove('fa-sun');
+                themeToggle.classList.add('fa-moon');
+                localStorage.removeItem('theme');
+            }
+        });
+
+        // Check for saved theme in localStorage
+        if (localStorage.getItem('theme') === 'dark-mode') {
+            body.classList.add('dark-mode');
+            themeToggle.classList.remove('fa-moon');
+            themeToggle.classList.add('fa-sun');
+        }
+    </script>
 </body>
 
 </html>

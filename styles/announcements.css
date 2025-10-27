@@ -7,7 +7,7 @@
     align-items: center;
     text-align: center;
     padding: 8rem 5% 4rem;
-    background: linear-gradient( #fff1eb 0%, #ffd8c9 70%, var(--lighter-bg) 100%);
+    background: linear-gradient(180deg, var(--hero-gradient) 0%, var(--lighter-bg) 100%);
     position: relative;
     overflow: hidden;
 }
@@ -64,14 +64,21 @@
 
 .filter-tag {
     padding: 0.6rem 1.5rem;
-    background: white;
+    background: var(--card-bg);
     border: 2px solid var(--border-color);
     border-radius: 50px;
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--text-gray);
     cursor: pointer;
-    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease, opacity 0.5s ease, transform 0.5s ease;
+}
+
+.filter-tags.visible .filter-tag {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .filter-tag:hover,
@@ -79,8 +86,14 @@
     background: var(--primary-color);
     color: white;
     border-color: var(--primary-color);
-    transform: translateY(-2px);
+    transform: translateY(-2px) !important;
 }
+
+.filter-tags.visible .filter-tag:nth-child(1) { transition-delay: 0.1s; }
+.filter-tags.visible .filter-tag:nth-child(2) { transition-delay: 0.2s; }
+.filter-tags.visible .filter-tag:nth-child(3) { transition-delay: 0.3s; }
+.filter-tags.visible .filter-tag:nth-child(4) { transition-delay: 0.4s; }
+.filter-tags.visible .filter-tag:nth-child(5) { transition-delay: 0.5s; }
 
 .announcements-grid {
     display: flex;
@@ -101,6 +114,9 @@
     flex-direction: row;
     align-items: stretch;
     position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .announcement-card::before {
@@ -123,6 +139,11 @@
     transform: translateY(-10px);
     border-color: var(--primary-color);
     box-shadow: 0 20px 40px rgba(255, 87, 34, 0.15);
+}
+
+.announcement-card.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .announcement-icon {

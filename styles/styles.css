@@ -8,12 +8,37 @@
     --primary-color: #ff5722;
     --secondary-color: #ff7043;
     --accent-color: #ec4899;
+
+    /* Light Mode */
     --light-bg: #ffffff;
     --lighter-bg: #f8fafc;
     --text-dark: #1e293b;
     --text-gray: #64748b;
     --card-bg: #ffffff;
     --border-color: #e2e8f0;
+    --header-bg: rgba(255, 255, 255, 0.9);
+    --header-scrolled-bg: rgba(255, 255, 255, 0.98);
+    --hero-gradient: linear-gradient(160deg, #fff1eb 0%, #ffd8c9 70%, #faeeee 100%);
+    --services-bg: #e0f7fa;
+    --team-bg: blanchedalmond;
+    --about-bg: cornsilk;
+    --contact-bg: #ECFFE6;
+}
+
+body.dark-mode {
+    --light-bg: #111827;
+    --lighter-bg: #1f2937;
+    --text-dark: #f8fafc;
+    --text-gray: #94a3b8;
+    --card-bg: #1f2937;
+    --border-color: #374151;
+    --header-bg: rgba(17, 24, 39, 0.9);
+    --header-scrolled-bg: rgba(17, 24, 39, 0.98);
+    --hero-gradient: linear-gradient(160deg, #111827 0%, #1a233f 70%, #111827 100%);
+    --services-bg: #111827;
+    --team-bg: #1f2937;
+    --about-bg: #030710;
+    --contact-bg: #1e252c;
 }
 
 body {
@@ -29,14 +54,14 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--header-bg);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
     transition: all 0.3s ease;
 }
 
 header.scrolled {
-    background: rgba(255, 255, 255, 0.98);
+    background: var(--header-scrolled-bg);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
@@ -143,6 +168,23 @@ nav ul li a:hover::after {
     padding: 1rem 5%;
 }
 
+body.dark-mode .mobile-nav.active {
+    background: var(--header-scrolled-bg);
+}
+
+#theme-toggle {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--text-dark);
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin-left: 1rem;
+}
+
+#theme-toggle:hover {
+    color: var(--primary-color);
+    transform: scale(1.1) rotate(15deg);
+}
+
 /* Hero Section */
 #home {
     min-height: 100vh;
@@ -152,7 +194,7 @@ nav ul li a:hover::after {
     align-items: center;
     text-align: center;
     padding: 8rem 5% 4rem;
-    background: linear-gradient(160deg, #fff1eb 0%, #ffd8c9 70%, #faeeee 100%);
+    background: var(--hero-gradient);
     position: relative;
     overflow: hidden;
 }
@@ -279,7 +321,7 @@ nav ul li a:hover::after {
 
 /* Services Section */
 #services {
-    background-color: #e0f7fa;
+    background-color: var(--services-bg);
     padding: 6rem 5%;
 }
 
@@ -386,7 +428,7 @@ nav ul li a:hover::after {
 /* Team Section */
 #team {
     padding: 6rem 5%;
-    background: blanchedalmond;
+    background: var(--team-bg);
 }
 
 #team h2 {
@@ -502,7 +544,7 @@ nav ul li a:hover::after {
 /* About Section */
 #about-us {
     padding: 6rem 5%;
-    background: cornsilk;
+    background: var(--about-bg);
 }
 
 #about-us h2 {
@@ -592,7 +634,7 @@ nav ul li a:hover::after {
 /* Contact Section */
 #contact {
     padding: 4rem 5%;
-    background: #ECFFE6;
+    background: var(--contact-bg);
 }
 
 #contact h2 {
@@ -655,7 +697,7 @@ nav ul li a:hover::after {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 4px rgba(255, 87, 34, 0.1);
-    background: white;
+    background: var(--light-bg);
 }
 
 .contact-form button {
@@ -742,7 +784,7 @@ footer {
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
-    color: var(--text-light);
+    color: var(--text-dark);
 }
 
 .footer-links ul {

@@ -1,173 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentorship Club Announcements</title>
-    <link rel="stylesheet" href="styles.css">
-
+    <title>Announcements - The Mentorship Club</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/announcements.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
-    <style>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #DEAC80;
-    margin: 0;
-    padding: 0;
-}
-header{
-    background-color: #DEAC80;
-}
-nav{
-    margin-left: 7.5%;
-}
-
-nav a {
-    text-decoration: none;
-    text-align: center;
-    background-color: lightsalmon;
-    color: #333;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: #ff5722;
-    color: #fff;
-}
-.main-heading{
-    text-align: center;
-color:#914F1E;
-}
-.announcement-container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-.announcement-card {
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 10px;
-}
-.announcement-card:hover {
-    transform: translateY(-10px);
-    transition: transform 0.3s ease;
-}
-.announcement-card img {
-    max-width: 150px;
-    margin:auto;
-  
-}
-
-.announcement-content {
-    padding: 20px;
-}
-
-.announcement-content h2 {
-    font-size: 20px;
-    color: #333;
-    margin: 0 0 10px;
-}
-
-.announcement-content p {
-    font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
-    font-size: 16px;
-    color: #666;
-    margin: 0 0 15px;
-}
-
-.announcement-content span {
-    display: block;
-    font-family: "Roboto Condensed", sans-serif;
-  font-optical-sizing: auto;
-    font-size: 14px;
-    color: #999;
-    margin-bottom: 10px;
-}
-
-.read-more {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #ff5722;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-}
-
-.read-more:hover {
-    background-color: #0056b3;
-}
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #333;
-    color: #fff;
-}
-</style>
 </head>
-<body>
 
-    <header>
+<body>
+    <!-- Navbar -->
+    <header id="navbar">
         <nav>
-           <a href="./index.html">Home</a></li>
+            <div class="logo">
+                <span>The Mentorship Club</span>
+            </div>
+            <ul class="mobile-nav">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html#about-us">About Us</a></li>
+                <li><a href="./index.html#services">Services</a></li>
+                <li><a href="./previouswork.html">Previous Work</a></li>
+                <li><a href="./announcement.html">Announcements</a></li>
+                <li><a href="./index.html#team">Mentors</a></li>
+                <li><a href="./index.html#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
-    <h2 class="main-heading">Latest Announcements</h2>
-    <div class="announcement-container">
-        <div class="announcement-card">
-            <img src="./assets/speakericon.png" alt="guest webinar">
-            <div class="announcement-content">
-                <h2>Special Guest Webinar: Breaking Into Tech – Tips from Industry Leaders</h2>
-                <p>Join us for an exclusive webinar featuring industry leaders who have successfully navigated their way into the tech world. They'll share their personal experiences, challenges, and tips on how you can break into the industry too. 
-                    This is a unique opportunity to hear directly from professionals who've been where you are and are now making their mark in the tech field.</p>
-                <span>Posted by Venus Chaudhary | September 1st, 2024</span>
-                <a href="#" class="read-more">Read More</a>
+    <!-- Hero Section -->
+    <section class="announcements-hero">
+        <h1>Latest Announcements</h1>
+        <p>Stay updated with the latest news, events, and opportunities from The Mentorship Club</p>
+    </section>
+
+    <!-- Announcements Section -->
+    <section id="announcements">
+        <div class="announcements-container">
+            <!-- Filter Tags -->
+            <div class="filter-tags">
+                <span class="filter-tag active" data-filter="all">All</span>
+                <span class="filter-tag" data-filter="webinar">Webinars</span>
+                <span class="filter-tag" data-filter="cohort">Cohorts</span>
+                <span class="filter-tag" data-filter="workshop">Workshops</span>
+                <span class="filter-tag" data-filter="event">Events</span>
+            </div>
+
+            <!-- Announcements Grid -->
+            <div class="announcements-grid">
+                <!-- Announcement Card 1 -->
+                <div class="announcement-card" data-category="webinar">
+                    <div class="announcement-icon">
+                        <img src="./assets/speakericon.png" alt="guest webinar">
+                    </div>
+                    <div class="announcement-content">
+                        <span class="announcement-category">Webinar</span>
+                        <h3>Special Guest Webinar: Breaking Into Tech</h3>
+                        <p>Join us for an exclusive webinar featuring industry leaders who have successfully navigated
+                            their way into the tech world. They'll share their personal experiences, challenges, and
+                            tips on how you can break into the industry too.</p>
+                        <div class="announcement-meta">
+                            <span>Posted by <b>Venus Chaudhary</b></span>
+                            <span>•</span>
+                            <i class="fas fa-calendar"></i>
+                            <span>September 1st, 2024</span>
+                        </div>
+                        <a href="#" class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Announcement Card 2 -->
+                <div class="announcement-card" data-category="cohort">
+                    <div class="announcement-icon">
+                        <img src="./assets/laptopicon.png" alt="mentorship cohort">
+                    </div>
+                    <div class="announcement-content">
+                        <span class="announcement-category">Cohort</span>
+                        <h3>Announcing the 2024 Mentorship Cohort</h3>
+                        <p>We're thrilled to introduce the 2024 Mentorship Cohort! This year's cohort is filled with
+                            passionate individuals eager to learn and grow together. You'll be paired with industry
+                            professionals who will guide you through your journey.</p>
+                        <div class="announcement-meta">
+                            <span>Posted by <b>Venus Chaudhary</b></span>
+                            <span>•</span>
+                            <i class="fas fa-calendar"></i>
+                            <span>September 1st, 2024</span>
+                        </div>
+                        <a href="#" class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Announcement Card 3 -->
+                <div class="announcement-card" data-category="workshop">
+                    <div class="announcement-icon">
+                        <img src="./assets/workshop.png" alt="Workshop series">
+                    </div>
+                    <div class="announcement-content">
+                        <span class="announcement-category">Workshop</span>
+                        <h3>Web Development Workshop Series</h3>
+                        <p>Have you ever wanted to build your own website? Our Web Development Workshop Series is here
+                            to help you turn that dream into reality. Over the course of this series, you'll learn the
+                            basics of HTML, CSS, and JavaScript.</p>
+                        <div class="announcement-meta">
+                            <span>Posted by <b>Venus Chaudhary</b></span>
+                            <span>•</span>
+                            <i class="fas fa-calendar"></i>
+                            <span>August 31st, 2024</span>
+                        </div>
+                        <a href="#" class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="announcement-card">
-            <img src="./assets/laptopicon.png" alt="mentorship cohort">
-            <div class="announcement-content">
-                <h2>Announcing the 2024 Mentorship Cohort: Meet Your Mentors and Peers!</h2>
-                <p>We're thrilled to introduce the 2024 Mentorship Cohort! This year's cohort is filled with passionate individuals eager to 
-                    learn and grow together. You'll be paired with industry professionals who will guide you 
-                    through your journey, providing insights, feedback, and support.</p>
-                <span>Posted by Venus Chaudhary | September 1st, 2024</span>
-                <a href="#" class="read-more">Read More</a>
-            </div>
-        </div>
-
-        <div class="announcement-card">
-            <img src="./assets/workshop.png" alt="Workshop series">
-            <div class="announcement-content">
-                <h2>Web Development Workshop Series: Build and Deploy Your First Website</h2>
-                <p>Have you ever wanted to build your own website? Our Web Development Workshop Series is here to help you turn that dream into reality. 
-                    Over the course of this series, you'll learn the basics of HTML, CSS, and JavaScript, and by the end, 
-                    you'll have a fully functional website to showcase..</p>
-                <span>Posted by Venus Chaudhary | August 31st, 2024</span>
-                <a href="#" class="read-more">Read More</a>
-            </div>
-        </div>
-    </div>
-
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 The mentorship Club. All Rights Reserved.</p>
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <span>The Mentorship Club</span>
+                </div>
+                <p>Empowering the next generation of leaders through personalized mentorship, collaborative learning,
+                    and hands-on experience.</p>
+                <div class="footer-social">
+                    <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./index.html#about-us">About Us</a></li>
+                    <li><a href="./index.html#services">Services</a></li>
+                    <li><a href="./index.html#team">Our Mentors</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Programs</h4>
+                <ul>
+                    <li><a href="#">Mentorship Cohorts</a></li>
+                    <li><a href="#">Hackathons</a></li>
+                    <li><a href="#">Coding Contests</a></li>
+                    <li><a href="#">Learning Sessions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="./previouswork.html">Previous Work</a></li>
+                    <li><a href="./announcement.html">Announcements</a></li>
+                    <li><a href="./index.html#contact">Contact</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 The Mentorship Club. All Rights Reserved. Crafted with passion for mentorship.</p>
+        </div>
     </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.mobile-nav');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenu.classList.toggle('open');
+        });
+
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenu.classList.remove('open');
+            });
+        });
+
+        // Filter tags functionality
+        const filterTags = document.querySelectorAll('.filter-tag');
+        const announcementCards = document.querySelectorAll('.announcement-card');
+
+        filterTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                // Set active class on tag
+                filterTags.forEach(t => t.classList.remove('active'));
+                tag.classList.add('active');
+
+                const filterValue = tag.getAttribute('data-filter');
+
+                // Show/hide cards based on filter
+                announcementCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
+
 </html>

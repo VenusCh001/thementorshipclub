@@ -11,6 +11,51 @@ Welcome to the Mentorship Club website! This platform is designed to connect men
 ## 🛠️ Built With
 - **HTML5**
 - **CSS3**
+- **JavaScript**
+
+## 📁 Project Structure
+
+```
+thementorshipclub/
+├── index.html                 # Main homepage
+├── previouswork.html          # Previous work showcase
+├── announcement.html          # Announcements page
+├── README.md                  # Project documentation
+├── CONTRIBUTING.md            # Contribution guidelines
+├── TODO.md                    # Task list
+├── css/
+│   ├── styles.css             # Main stylesheet
+│   ├── previouswork.css       # Styles for previous work page
+│   └── announcement.css       # Styles for announcement page
+├── js/
+│   └── script.js              # Main JavaScript file
+└── assets/
+    ├── icons/                 # Service and UI icons
+    │   ├── programs-icon.png
+    │   ├── results-icon.png
+    │   ├── coaching-icon.png
+    │   └── events-icon.png
+    ├── mentors/               # Mentor profile photos
+    │   ├── mentor-alexer-smith.png
+    │   ├── mentor-may-brown.png
+    │   ├── mentor-ann-richmond.png
+    │   ├── mentor-roxie-swanson.png
+    │   ├── mentor-jenny-swiss.png
+    │   └── mentor-louisana-willow.png
+    ├── images/                # General images
+    │   ├── girl-with-books.png
+    │   └── profile.png
+    ├── previous-work/         # Previous work illustrations
+    │   ├── hackasthon.jpg
+    │   ├── summer-cohort.png
+    │   └── winter-cohort.jpg
+    └── announcements/         # Announcement icons
+        ├── group-study-thumbnail.png
+        ├── laptopicon.png
+        ├── notes-incoming-call-icon.png
+        ├── speakericon.png
+        └── workshop.png
+```
 
 ## 📝 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

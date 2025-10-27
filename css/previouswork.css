@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+nav {
+    margin-top: 20px;
+    margin-left: 7.5%;
+}
+
+nav a {
+    text-decoration: none;
+    text-align: center;
+    background-color: lightsalmon;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ff5722;
+    color: #fff;
+}
+
+.section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    padding: 50px;
+    background-color: #f4f7fa;
+    color: #333;
+    transition: background-color 0.5s;
+}
+
+.content {
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.illustration img {
+    max-width: 700px;
+    height: auto;
+}
+
+#summer-cohort {
+    background-color: #f0f8ff;
+}
+
+#winter-cohort {
+    background-color: #e6e6fa;
+}
+
+#hackathon-throwback {
+    background-color: #ffe4e1;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+}

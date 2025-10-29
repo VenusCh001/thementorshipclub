@@ -249,4 +249,9 @@ if (localStorage.getItem('theme') === 'dark-mode') {
 
     // Start auto-slide
     startAutoSlide();
+
+    const yearSpan = document.getElementById("current-year");
+    if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+    }
 })();

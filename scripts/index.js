@@ -250,3 +250,21 @@ if (localStorage.getItem('theme') === 'dark-mode') {
     // Start auto-slide
     startAutoSlide();
 })();
+
+        function toggleFAQ(header) {
+            header.classList.toggle('active');
+            const content = header.nextElementSibling;
+            content.classList.toggle('active');
+        }
+
+        // Close other FAQs when opening a new one
+        document.querySelectorAll('.faq-header').forEach(header => {
+            header.addEventListener('click', function() {
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== this.parentElement) {
+                        item.querySelector('.faq-header').classList.remove('active');
+                        item.querySelector('.faq-content').classList.remove('active');
+                    }
+                });
+            });
+        });

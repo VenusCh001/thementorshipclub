@@ -436,16 +436,18 @@ body.dark-mode .mobile-nav.active {
     margin-bottom: 1.5rem;
     position: relative;
     transition: transform 0.4s ease;
+    
 }
 
 .service-card:hover .service-icon {
     transform: scale(1.1) rotate(5deg);
 }
 
-.service-icon img {
-    width: 40px;
-    height: 40px;
-    filter: brightness(0) invert(1);
+.service-icon i {
+    font-size: 2rem;
+    color: #ffffff;
+    margin: auto 1.5rem auto;
+    /* filter: brightness(0) invert(1); */
 }
 
 .service-card h3 {

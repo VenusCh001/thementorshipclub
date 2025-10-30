@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - The Mentorship Club</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/resources.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header id="navbar">
+        <nav>
+            <div class="logo">
+                <span>The Mentorship Club</span>
+            </div>
+            <ul class="mobile-nav">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html#about-us">About Us</a></li>
+                <li><a href="./index.html#services">Services</a></li>
+                <li><a href="./resources.html" class="active">Resources</a></li>
+                <li><a href="./previouswork.html">Previous Work</a></li>
+                <li><a href="./announcement.html">Announcements</a></li>
+                <li><a href="./index.html#team">Mentors</a></li>
+                <li><a href="./index.html#contact">Contact</a></li>
+            </ul>
+            <i class="fas fa-moon" id="theme-toggle"></i>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="resources-hero">
+        <div class="hero-badge">💻 Empowering Growth Through Knowledge</div>
+        <h1>Explore Our Resources</h1>
+        <p>Access guides, toolkits, and materials curated by mentors to support your learning and growth journey.</p>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources">
+        <div class="resources-container">
+            <!-- Filter Tags -->
+            <div class="filter-tags">
+                <span class="filter-tag active" data-filter="all">All</span>
+                <span class="filter-tag" data-filter="guide">Guides</span>
+                <span class="filter-tag" data-filter="ebook">E-Books</span>
+                <span class="filter-tag" data-filter="template">Templates</span>
+                <span class="filter-tag" data-filter="video">Video Tutorials</span>
+            </div>
+
+            <!-- Resources Grid -->
+            <div class="resources-grid">
+                <!-- Resource Card 1 -->
+                <div class="resources-card" data-category="guide">
+                    <div class="resources-icon">
+                        <img src="./assets/icons/guide.png" alt="guide">
+                    </div>
+                    <div class="resources-content">
+                        <span class="resources-category">Guide</span>
+                        <h3>Kickstart Your Career in Tech</h3>
+                        <p>A step-by-step guide to help students and beginners enter the world of technology — including
+                            roadmap, tools, and must-learn skills for 2025.</p>
+                       
+                        <a href="#" class="read-more">Download Guide <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Resource Card 2 -->
+                <div class="resources-card" data-category="template">
+                    <div class="resources-icon">
+                        <img src="./assets/icons/template.png" alt="template">
+                    </div>
+                    <div class="resources-content">
+                        <span class="resources-category">Template</span>
+                        <h3>Resume & Portfolio Templates</h3>
+                        <p>Use these free editable templates designed by industry mentors to create standout resumes and
+                            professional portfolios that impress recruiters. <br>
+                            Ready-to-use tools and templates to simplify your workflow — from resume builders to project planners and community event kits.
+                        </p>
+                       
+                        <a href="#" class="read-more">Get Template <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Resource Card 3 -->
+                <div class="resources-card" data-category="video">
+                    <div class="resources-icon">
+                        <img src="./assets/icons/videoicons.png" alt="video tutorial">
+                    </div>
+                    <div class="resources-content">
+                        <span class="resources-category">Video Tutorial</span>
+                        <h3>Building Your First Website</h3>
+                        <p>Watch this easy-to-follow video session where mentors guide you through creating your first
+                            responsive website using HTML, CSS, and JavaScript.</p>
+
+                        <a href="#" class="read-more">Watch Video <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Resource Card 4 -->
+                <div class="resources-card" data-category="ebook">
+                    <div class="resources-icon">
+                        <img src="./assets/icons/ebook.png" alt="e-book">
+                    </div>
+                    <div class="resources-content">
+                        <span class="resources-category">E-Book</span>
+                        <h3>Explore E-Books</h3>
+                        <p>
+                            Explore a curated collection of insightful e-books designed to boost your learning journey.
+                            Whether you’re diving into coding, leadership, or personal growth, our e-books offer
+                            knowledge crafted by mentors and industry experts.
+                        </p>
+
+                        <a href="#" class="read-more">Download E-books <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <span>The Mentorship Club</span>
+                </div>
+                <p>Empowering the next generation of leaders through personalized mentorship, collaborative learning,
+                    and hands-on experience.</p>
+                <div class="footer-social">
+                    <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./index.html#about-us">About Us</a></li>
+                    <li><a href="./index.html#services">Services</a></li>
+                    <li><a href="./index.html#team">Our Mentors</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Programs</h4>
+                <ul>
+                    <li><a href="#">Mentorship Cohorts</a></li>
+                    <li><a href="#">Hackathons</a></li>
+                    <li><a href="#">Coding Contests</a></li>
+                    <li><a href="#">Learning Sessions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="./previouswork.html">Previous Work</a></li>
+                    <li><a href="./resources.html">Resources</a></li>
+                    <li><a href="./index.html#contact">Contact</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 The Mentorship Club. All Rights Reserved. Crafted with passion for mentorship.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/resources.js"></script>
+</body>
+
+</html>

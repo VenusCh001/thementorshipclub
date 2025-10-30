@@ -73,7 +73,9 @@ nav {
     max-width: 1400px;
     margin: 0 auto;
 }
-
+.nav-hidden {
+    display: none !important;
+}
 .logo {
     display: flex;
     align-items: center;

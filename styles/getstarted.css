@@ -61,91 +61,181 @@ body.dark-mode .get-started h2 {
   font-size: 1rem;
 }
 
-/* --- Timeline Container --- */
+/* --- Timeline (Fixed Responsive Version) --- */
+/* === TIMELINE CONTAINER === */
+/* === TIMELINE CONTAINER === */
 .timeline {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
   position: relative;
-  margin-bottom: 50px;
+  list-style: none;
+  /* padding: 60px 0; */
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
+/* === CENTER LINE === */
 .timeline::before {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 10%;
-  right: 10%;
-  height: 4px;
-  background: linear-gradient(to right, #ff5722, #ff7043, #ec4899);
-  z-index: 0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: linear-gradient(180deg, #ff5722, #ff7043, #ec4899);
+  transform: translateX(-50%);
   border-radius: 2px;
 }
 
-/* --- Individual Step Cards --- */
-.step {
+/* === EACH TIMELINE ITEM === */
+.timeline li {
   position: relative;
-  z-index: 1;
-  background: #fff;
-  padding: 30px 25px;
-  width: 220px;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(255, 87, 34, 0.1);
-  transition: all 0.3s ease;
+  width: 50%;
+  padding: 40px 50px;
+  box-sizing: border-box;
 }
 
-.step:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(255, 87, 34, 0.2);
+/* === SIDE ALIGNMENT === */
+.direction-l {
+  float: left;
+  text-align: left;
 }
 
-/* Dark Mode Step */
-body.dark-mode .step {
-  background: #333;
-  color: #f5f5f5;
+.direction-r {
+  float: right;
+  text-align: left;
 }
 
-/* Step Icon */
-.icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 15px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #ff5722, #ff7043, #ec4899);
+/* === CLEAR FLOATS === */
+.timeline::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* === FLAG WRAPPER === */
+.flag-wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 10px rgba(255, 87, 34, 0.3);
+  justify-content: flex-start;
+  gap: 16px;
 }
 
-.icon img {
-  width: 30px;
-  height: 30px;
+.direction-l .flag-wrapper {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+/* === HEXAGON ICON === */
+.hexa {
+  position: relative;
+  width: 70px;
+  height: 40px;
+  background: linear-gradient(135deg, #ff5722, #ff7043, #ec4899);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(255, 87, 34, 0.25);
+}
+
+.hexa img {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   filter: brightness(0) invert(1);
 }
 
-/* Step Headings & Descriptions */
-.step h3 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
+/* === TEXT BLOCK === */
+.flag {
+  background: #fff;
+  padding: 10px 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(255, 87, 34, 0.15);
+  font-family: 'Poppins', sans-serif;
   color: #333;
 }
 
-.step p {
-  font-size: 0.9rem;
-  color: #666;
-  line-height: 1.5;
+.desc {
+  background: #fff;
+  padding: 15px 18px;
+  margin-top: 10px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(255, 87, 34, 0.1);
+  line-height: 1.6;
+  color: #444;
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Dark Mode Fix for Text Visibility */
-body.dark-mode .step h3 {
-  color: #ffd8c9;
+/* === ALIGN HEXA TO CENTER LINE === */
+.direction-l .hexa {
+  margin-right: -38px;
 }
 
-body.dark-mode .step p {
-  color: #f5f5f5;
+.direction-r .hexa {
+  margin-left: -38px;
 }
+
+/* === IMPROVED ZIG-ZAG LAYOUT === */
+.timeline li.direction-l {
+  margin-top: 60px;
+}
+
+.timeline li.direction-r {
+  margin-top: 120px;
+}
+
+/* Slight fine-tuning for a smooth step look */
+.timeline li:nth-child(1).direction-l { margin-top: 0; }
+.timeline li:nth-child(2).direction-r { margin-top: 80px; }
+.timeline li:nth-child(3).direction-l { margin-top: 80px; }
+.timeline li:nth-child(4).direction-r { margin-top: 80px; }
+
+
+/* === HOVER EFFECTS (new polish) === */
+.timeline li:hover .flag,
+.timeline li:hover .desc {
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.2);
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 900px) {
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timeline li {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    margin-top: 40px !important;
+    margin-bottom: 40px;
+  }
+
+  .direction-l,
+  .direction-r {
+    float: none;
+    text-align: left;
+  }
+
+  .direction-l .flag-wrapper {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .direction-l .hexa,
+  .direction-r .hexa {
+    margin: 0;
+  }
+
+  .desc {
+    text-align: left;
+  }
+}
+
+
 
 /* --- Join Button --- */
 .join-btn {
@@ -170,23 +260,7 @@ body.dark-mode .join-btn {
   box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4);
 }
 
-/* Responsive Timeline */
-@media (max-width: 900px) {
-  .timeline::before {
-    display: none;
-  }
-  .timeline {
-    flex-direction: column;
-    align-items: center;
-  }
-  .step {
-    width: 80%;
-    max-width: 320px;
-  }
-}
-
 /*FAQ SECTION*/
-
 .faq-section {
   background: #fff1eb;
   padding: 80px 20px;

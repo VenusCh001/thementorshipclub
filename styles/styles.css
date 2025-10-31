@@ -55,7 +55,22 @@ body {
     background: var(--light-bg);
     position: relative;
 }
-
+#faq-section {
+    padding: 4rem 5% 3rem;
+    text-align: center;
+    background: var(--light-bg);
+    position: relative;
+}
+#faq-section h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--text-dark), var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
 .hero-section>* {
     position: relative;
     z-index: 1;
@@ -193,6 +208,12 @@ body.dark-mode.page-learning .hero-section {
 .faq-answer {
     display: none;
     padding: 0 1.25rem 1.25rem;
+    color: var(--text-gray);
+    line-height: 1.7;
+}
+.faq-answer p {
+    text-align: left;
+    font-size: 0.95rem;
     color: var(--text-gray);
     line-height: 1.7;
 }
@@ -519,7 +540,7 @@ body.dark-mode .leaderboard-row:nth-child(even) {
 
 .btn-cta {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: #fff;
+    color: #ffffff;
     border: none;
     border-radius: 999px;
     padding: 0.8rem 1.2rem;
@@ -1839,4 +1860,7 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3f01081 (FAQs updated)

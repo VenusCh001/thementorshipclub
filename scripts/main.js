@@ -62,3 +62,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+//  Smooth Preloader with Delay + Fade
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+
+  // Keep preloader visible for 2 seconds, then fade out
+  setTimeout(() => {
+    preloader.classList.add("fade-out");
+
+    // Fully remove after fade
+    setTimeout(() => {
+      preloader.classList.add("hidden");
+    }, 1500); // matches CSS transition
+  }, 2000); // stay visible for 2 seconds
+});
+
+
+
+
+

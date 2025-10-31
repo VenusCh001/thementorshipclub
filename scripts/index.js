@@ -255,3 +255,4 @@ if (localStorage.getItem('theme') === 'dark-mode') {
     yearSpan.textContent = new Date().getFullYear();
     }
 })();
+

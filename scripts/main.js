@@ -62,3 +62,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+// Improved Preloader: minimum visible time + graceful removal
+(function () {
+  const MIN_VISIBLE_MS = 1200; // minimum time preloader stays visible
+  const preloader = document.getElementById('preloader');
+  if (!preloader) return;
+
+  const now = Date.now();
+  let loadedAt = null;
+
+  window.addEventListener('load', () => {
+    loadedAt = Date.now();
+    const elapsed = loadedAt - now;
+    const wait = Math.max(0, MIN_VISIBLE_MS - elapsed);
+
+    // After wait, start fade out
+    setTimeout(() => {
+      preloader.classList.add('preloader-hidden');
+
+      // Wait for CSS transition to finish, then remove element
+      const onTransitionEnd = (e) => {
+        if (e.propertyName === 'opacity') {
+          preloader.removeEventListener('transitionend', onTransitionEnd);
+          // remove from DOM so it can't affect layout at all
+          if (preloader.parentNode) preloader.parentNode.removeChild(preloader);
+        }
+      };
+      preloader.addEventListener('transitionend', onTransitionEnd);
+
+      // Fallback: if transitionend doesn't fire, remove after 1000ms
+      setTimeout(() => {
+        if (preloader.parentNode) preloader.parentNode.removeChild(preloader);
+      }, 1000 + 600);
+    }, wait);
+  });
+})();

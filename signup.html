@@ -49,11 +49,22 @@
             <h3>Create Your Account</h3>
             <p>Join our community today!</p>
             <form class="auth-form" id="signup-form">
+                
+                <input type="text" id="signup-name" placeholder="Enter your full name" required>
+                
+                <select id="signup-role" required>
+                    <option value="" disabled selected>I am a...</option>
+                    <option value="mentee">Mentee (Student)</option>
+                    <option value="mentor">Mentor</option>
+                    <option value="admin">Admin</option> </select>
+                
                 <input type="email" id="signup-email" placeholder="Enter your email" required>
                 <input type="password" id="signup-password" placeholder="Enter your password" required>
+                
                 <p id="success-message" class="auth-message success"></p>
                 <p id="error-message" class="auth-message error"></p>
-                <button type="submit" class="btn-nav btn-nav-primary">Sign Up</button>
+                
+                <button type="submit" class="btn  btn-nav-primary">Sign Up</button>
             </form>
             <p class="auth-switch-link">
                 Already have an account? <a href="login.html">Login</a>
@@ -113,6 +124,7 @@
 
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     
     <script src="scripts/main.js"></script> 
     <script src="scripts/auth.js"></script> </body>

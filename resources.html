@@ -22,15 +22,19 @@
             <div class="logo">
                 <span>The Mentorship Club</span>
             </div>
-            <ul class="mobile-nav">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./index.html#about-us">About Us</a></li>
-                <li><a href="./index.html#services">Services</a></li>
-                <li><a href="./resources.html" class="active">Resources</a></li>
-                <li><a href="./previouswork.html">Previous Work</a></li>
+             <ul class="mobile-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            <li><a href="./previouswork.html">Previous Work</a></li>
                 <li><a href="./announcement.html">Announcements</a></li>
-                <li><a href="./index.html#team">Mentors</a></li>
-                <li><a href="./index.html#contact">Contact</a></li>
+                <li><a href="#team">Mentors</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li id="nav-li-login"><a href="login.html" class="btn-nav btn-nav-primary">Login</a></li>
+                <li id="nav-li-logout" class="nav-hidden">
+                    <a href="#" id="logout-button" class="btn-nav btn-nav-primary">Logout</a>
+                </li>
             </ul>
             <i class="fas fa-moon" id="theme-toggle"></i>
             <div class="mobile-menu">
@@ -180,7 +184,11 @@
             <p>&copy; 2024 The Mentorship Club. All Rights Reserved. Crafted with passion for mentorship.</p>
         </div>
     </footer>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 
+    <script src="scripts/main.js"></script>
     <script src="scripts/resources.js"></script>
 </body>
 

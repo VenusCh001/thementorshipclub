@@ -3,13 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // === 1. FIREBASE INITIALIZATION ===
     // TODO: Paste your Firebase Configuration snippet here
      const firebaseConfig = {
-        apiKey: "AIzaSyBh1QDVmc7DTKt2KX6wtfipA8OOf2QUYC8",
-        authDomain: "thementorshipclub.firebaseapp.com",
-        projectId: "thementorshipclub",
-        storageBucket: "thementorshipclub.firebasestorage.app",
-        messagingSenderId: "947641206696",
-        appId: "1:947641206696:web:21d9b154ec2d5a84547f9d",
-        measurementId: "G-Z20P0RQZ1W"
+      apiKey: "AIzaSy...YOUR...KEY",
+      authDomain: "your-project-id.firebaseapp.com",
+      projectId: "your-project-id",
+      storageBucket: "your-project-id.appspot.com",
+      messagingSenderId: "1234567890",
+      appId: "1:1234567890:web:abcdef1234567890"
     };
     // Initialize Firebase
     if (firebase.apps.length === 0) {

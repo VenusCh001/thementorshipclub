@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Get the auth service from the main.js-initialized app
-    // This will work as long as main.js is loaded first
+    // Get the auth service and db from the main.js-initialized app
     const auth = firebase.auth();
+    const db = firebase.firestore(); // Initialize Firestore
 
     // --- Login Form Logic ---
     const loginForm = document.getElementById('login-form');
@@ -16,25 +16,20 @@ document.addEventListener('DOMContentLoaded', () => {
             const email = document.getElementById('login-email').value;
             const password = document.getElementById('login-password').value;
 
-            // Hide messages on new submit
             successMsg.style.display = 'none';
             errorMsg.style.display = 'none';
 
-            // Firebase Login Logic
             auth.signInWithEmailAndPassword(email, password)
                 .then((userCredential) => {
-                    // Show success message
                     errorMsg.style.display = 'none';
                     successMsg.textContent = 'Login successful! Redirecting to home...';
                     successMsg.style.display = 'block';
 
-                    // Redirect after a delay
                     setTimeout(() => {
                         window.location.href = 'index.html';
-                    }, 2000); // 2-second delay
+                    }, 2000); 
                 })
                 .catch((error) => {
-                    // Show error message
                     successMsg.style.display = 'none';
                     errorMsg.textContent = error.message;
                     errorMsg.style.display = 'block';
@@ -42,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Sign Up Form Logic ---
+    // --- Sign Up Form Logic (UPDATED) ---
     const signupForm = document.getElementById('signup-form');
     if (signupForm) {
         const successMsg = document.getElementById('success-message');
@@ -51,28 +46,43 @@ document.addEventListener('DOMContentLoaded', () => {
         signupForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
+            // Get all form values
+            const fullName = document.getElementById('signup-name').value;
+            const role = document.getElementById('signup-role').value;
             const email = document.getElementById('signup-email').value;
             const password = document.getElementById('signup-password').value;
 
-            // Hide messages on new submit
             successMsg.style.display = 'none';
             errorMsg.style.display = 'none';
 
-            // Firebase Sign Up Logic
+            // 1. Create the user in Firebase Auth
             auth.createUserWithEmailAndPassword(email, password)
                 .then((userCredential) => {
-                    // Show success message
+                    // User created. Now, save extra data to Firestore
+                    console.log('User created:', userCredential.user.uid);
+
+                    // 2. Save user data to Firestore
+                    return db.collection("users").doc(userCredential.user.uid).set({
+                        fullName: fullName,
+                        email: email,
+                        role: role,
+                        createdAt: firebase.firestore.FieldValue.serverTimestamp()
+                    });
+                })
+                .then(() => {
+                    // 3. Show success and redirect
+                    console.log('User data saved to Firestore.');
                     errorMsg.style.display = 'none';
                     successMsg.textContent = 'Sign up successful! Redirecting to home...';
                     successMsg.style.display = 'block';
 
-                    // Redirect after a delay
                     setTimeout(() => {
                         window.location.href = 'index.html';
-                    }, 2000); // 2-second delay
+                    }, 2000);
                 })
                 .catch((error) => {
-                    // Show error message
+                    // Handle errors from either Auth or Firestore
+                    console.error('Sign Up Error:', error);
                     successMsg.style.display = 'none';
                     errorMsg.textContent = error.message;
                     errorMsg.style.display = 'block';

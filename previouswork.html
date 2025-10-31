@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Previous Work - The Mentorship Club</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/scroll.css">
     <link rel="stylesheet" href="styles/previouswork.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,16 +22,20 @@
             <div class="logo">
                 <span>The Mentorship Club</span>
             </div>
-             <ul class="mobile-nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#about-us">About Us</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="previouswork.html" target="_blank">Previous Work</a></li>
-          <li><a href="announcement.html" target="_blank">Announcements</a></li>
-          <li><a href="index.html#team">Mentors</a></li>
-          <li><a href="./resources.html">Learning Resources</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
+            <ul class="mobile-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about-us">About Us</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="previouswork.html" target="_blank">Previous Work</a></li>
+                 <li><a href="resources.html" target="_blank">Resources</a></li>
+                <li><a href="announcement.html" target="_blank">Announcements</a></li>
+                <li><a href="index.html#team">Mentors</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li id="nav-li-login"><a href="login.html" class="btn-nav btn-nav-primary">Login</a></li>
+                <li id="nav-li-logout" class="nav-hidden">
+                    <a href="#" id="logout-button" class="btn-nav btn-nav-primary">Logout</a>
+                </li>
+            </ul>
             <i class="fas fa-moon" id="theme-toggle"></i>
             <div class="mobile-menu">
                 <span></span>
@@ -190,8 +195,17 @@
         </div>
     </footer>
 
+ <button id="scrollToTopBtn" title="Go to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script src="scripts/main.js"></script>
     <script src="scripts/previouswork.js"></script>
+    <script src="scripts/scroll.js"></script>
 </body>
 
 </html>

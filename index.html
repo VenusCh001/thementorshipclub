@@ -4,14 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Mentorship Club</title>
-    <link rel="icon" href="./assets/icons/fav.png" type="image/png" />
-    <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="icon" href="./assets/icons/fav.png" type="image/png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/scroll.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -20,27 +17,31 @@
 
   <body>
     <header id="navbar">
-      <nav>
-        <div class="logo">
-          <span>The Mentorship Club</span>
-        </div>
-        <ul class="mobile-nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#about-us">About Us</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="previouswork.html" target="_blank">Previous Work</a></li>
-          <li><a href="announcement.html" target="_blank">Announcements</a></li>
-          <li><a href="index.html#team">Mentors</a></li>
-          <li><a href="./resources.html">Learning Resources</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-        <i class="fas fa-moon" id="theme-toggle"></i>
-        <div class="mobile-menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </nav>
+        <nav>
+            <div class="logo">
+                <span>The Mentorship Club</span>
+            </div>
+            <ul class="mobile-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            <li><a href="./previouswork.html">Previous Work</a></li>
+                <li><a href="./announcement.html">Announcements</a></li>
+                <li><a href="#team">Mentors</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li id="nav-li-login"><a href="login.html" class="btn-nav btn-nav-primary">Login</a></li>
+                <li id="nav-li-logout" class="nav-hidden">
+                    <a href="#" id="logout-button" class="btn-nav btn-nav-primary">Logout</a>
+                </li>
+            </ul>
+            <i class="fas fa-moon" id="theme-toggle"></i>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
     </header>
 
     <section id="home">
@@ -608,24 +609,19 @@
     </section>
 
     <section id="contact">
-      <h2 class="fade-in">Contact Us</h2>
-      <p class="section-subtitle fade-in">
-        Let's start your mentorship journey together
-      </p>
-      <div class="contact-container fade-in">
-        <h3>We've Been Waiting for You</h3>
-        <p>
-          We want to hear from you. Let us know how we can help you achieve your
-          goals.
-        </p>
-        <form class="contact-form">
-          <input type="text" placeholder="Enter your name" required />
-          <input type="email" placeholder="Enter your email" required />
-          <input type="text" placeholder="Business name" />
-          <input type="tel" placeholder="Phone number" />
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
+        <h2 class="fade-in">Contact Us</h2>
+        <p class="section-subtitle fade-in">Let's start your mentorship journey together</p>
+        <div class="contact-container fade-in">
+            <h3>We've Been Waiting for You</h3>
+            <p>We want to hear from you. Let us know how we can help you achieve your goals.</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Enter your name" required>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <input type="text"id="business"placeholder="Business name">
+                <input type="tel" placeholder="Phone number" id="phone" pattern="^\+?[0-9]{7,15}$">
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </section>
 
     <footer>
@@ -688,8 +684,20 @@
         </p>
       </div>
     </footer>
+      <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn" title="Go to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script src="scripts/main.js"></script>
     <script src="scripts/index.js"></script>
     <script src="scripts/faq.js"></script>
+     <script src="scripts/scroll.js"></script>
   </body>
 </html>
+   

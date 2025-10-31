@@ -1,0 +1,155 @@
+
+
+#auth-page {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 5% 4rem;
+    background: var(--lighter-bg);
+}
+
+.auth-container {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 2.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.auth-container h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.auth-container > p {
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.auth-form input {
+    padding: 1rem 1.2rem;
+    background: var(--lighter-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    font-family: 'SUSE', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.auth-form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(255, 87, 34, 0.1);
+    background: var(--light-bg);
+}
+
+.auth-form button {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.auth-switch-link {
+    margin-top: 2rem;
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+.auth-switch-link a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.auth-switch-link a:hover {
+    text-decoration: underline;
+}
+
+.auth-message {
+    display: none; 
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border: 1px solid transparent;
+    text-align: center;
+}
+
+.auth-message.success {
+    background: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.auth-message.error {
+    background: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+/* === Styles for new dropdown in auth form === */
+
+.auth-form select {
+    padding: 1rem 1.2rem;
+    background: var(--lighter-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    color: var(--text-dark); /* Will be light gray if no option is selected */
+    font-size: 0.95rem;
+    font-family: 'SUSE', sans-serif;
+    transition: all 0.3s ease;
+    
+    /* Removes default OS styling */
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;
+    
+    /* Custom dropdown arrow */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1.2rem center;
+    background-size: 1em;
+}
+
+/* Gray placeholder text for dropdown */
+.auth-form select:required:invalid {
+    color: var(--text-gray);
+}
+.auth-form select option[value=""] {
+    color: var(--text-gray);
+}
+.auth-form select option {
+    color: var(--text-dark);
+}
+
+.auth-form select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(255, 87, 34, 0.1);
+    background: var(--light-bg);
+}

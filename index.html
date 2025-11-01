@@ -27,13 +27,26 @@
                 <li><a href="#about-us">About Us</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="resources.html">Resources</a></li>
-            <li><a href="./previouswork.html">Previous Work</a></li>
+                <li><a href="./previouswork.html">Previous Work</a></li>
                 <li><a href="./announcement.html">Announcements</a></li>
                 <li><a href="#team">Mentors</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li id="nav-li-login"><a href="login.html" class="btn-nav btn-nav-primary">Login</a></li>
+
+                <!-- Profile Icon (visible only when logged in) -->
+                <li id="nav-li-profile" class="nav-hidden">
+                    <a href="#" id="profile-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </a>
+                </li>
+
+                <!-- Login button (visible only when logged out) -->
+                <li id="nav-li-login">
+                    <a href="login.html" class="btn-nav btn-nav-primary">Login</a>
+                </li>
+
+                <!-- Logout button (visible only when logged in) -->
                 <li id="nav-li-logout" class="nav-hidden">
-                    <a href="#" id="logout-button" class="btn-nav btn-nav-primary">Logout</a>
+                    <a href="#" id="logout-button" class="btn-nav btn-nav-secondary">Logout</a>
                 </li>
             </ul>
             <i class="fas fa-moon" id="theme-toggle"></i>
@@ -56,23 +69,23 @@
                 <a href="#contact" class="btn btn-secondary">Get Started</a>
             </div>
             <div class="hero-stats-bar">
-            <div class="stat-item">
-                <span class="number">500+</span>
-                <span class="label">Mentors</span>
+                <div class="stat-item">
+                    <span class="number">500+</span>
+                    <span class="label">Mentors</span>
+                </div>
+                <div class="stat-item">
+                    <span class="number">2,000+</span>
+                    <span class="label">Students</span>
+                </div>
+                <div class="stat-item">
+                    <span class="number">50+</span>
+                    <span class="label">Programs</span>
+                </div>
+                <div class="stat-item">
+                    <span class="number">95%</span>
+                    <span class="label">Success</span>
+                </div>
             </div>
-            <div class="stat-item">
-                <span class="number">2,000+</span>
-                <span class="label">Students</span>
-            </div>
-            <div class="stat-item">
-                <span class="number">50+</span>
-                <span class="label">Programs</span>
-            </div>
-            <div class="stat-item">
-                <span class="number">95%</span>
-                <span class="label">Success</span>
-            </div>
-        </div>
         </div>
     </section>
 
@@ -243,7 +256,8 @@
                             <div class="quote-icon">
                                 <i class="fas fa-quote-left"></i>
                             </div>
-                            <p class="testimonial-text">"The coding contests and hackathons pushed me beyond my limits. I
+                            <p class="testimonial-text">"The coding contests and hackathons pushed me beyond my limits.
+                                I
                                 learned more in 3 months here than I did in a year of self-study. The community is
                                 incredibly supportive!"</p>
                             <div class="testimonial-author">
@@ -268,7 +282,8 @@
                             <div class="quote-icon">
                                 <i class="fas fa-quote-left"></i>
                             </div>
-                            <p class="testimonial-text">"As someone new to blockchain, I was intimidated at first. But the
+                            <p class="testimonial-text">"As someone new to blockchain, I was intimidated at first. But
+                                the
                                 mentors here made complex concepts easy to understand. I've now built my own dApp!"</p>
                             <div class="testimonial-author">
                                 <img src="./assets/images/testimonials/arjun-mehra.jpg" alt="Arjun Mehra">
@@ -292,8 +307,10 @@
                             <div class="quote-icon">
                                 <i class="fas fa-quote-left"></i>
                             </div>
-                            <p class="testimonial-text">"The AI mentorship program exceeded all my expectations. Real-world
-                                projects, and a mentor who genuinely cares about my growth. Helped me a lot in my career!"</p>
+                            <p class="testimonial-text">"The AI mentorship program exceeded all my expectations.
+                                Real-world
+                                projects, and a mentor who genuinely cares about my growth. Helped me a lot in my
+                                career!"</p>
                             <div class="testimonial-author">
                                 <img src="./assets/images/testimonials/bhumika-patel.jpg" alt="Bhumika Patel">
                                 <div class="author-info">
@@ -316,8 +333,10 @@
                             <div class="quote-icon">
                                 <i class="fas fa-quote-left"></i>
                             </div>
-                            <p class="testimonial-text">"The full-stack mentorship cohort was exactly what I needed. From
-                                React to Node.js, I learned it all with practical projects. The collaborative environment
+                            <p class="testimonial-text">"The full-stack mentorship cohort was exactly what I needed.
+                                From
+                                React to Node.js, I learned it all with practical projects. The collaborative
+                                environment
                                 made learning fun!"</p>
                             <div class="testimonial-author">
                                 <img src="./assets/images/testimonials/tanushree-pant.jpg" alt="Tanushree Pant">
@@ -385,7 +404,7 @@
             <form class="contact-form">
                 <input type="text" placeholder="Enter your name" required>
                 <input type="email" id="email" placeholder="Enter your email" required>
-                <input type="text"id="business"placeholder="Business name">
+                <input type="text" id="business" placeholder="Business name">
                 <input type="tel" placeholder="Phone number" id="phone" pattern="^\+?[0-9]{7,15}$">
                 <button type="submit">Send Message</button>
             </form>
@@ -434,18 +453,19 @@
                     <li><a href="./announcement.html">Announcements</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#">FAQs</a></li>
-                      <li><a href="./resources.html">Learning Resources</a></li>
+                    <li><a href="./resources.html">Learning Resources</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <span id="current-year">2024</span> The Mentorship Club. All Rights Reserved. Crafted with passion for mentorship.</p>
+            <p>&copy; <span id="current-year">2024</span> The Mentorship Club. All Rights Reserved. Crafted with passion
+                for mentorship.</p>
         </div>
     </footer>
-      <!-- Scroll to Top Button -->
-  <button id="scrollToTopBtn" title="Go to top">
-    <i class="fa-solid fa-arrow-up"></i>
-  </button>
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" title="Go to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
 
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
@@ -455,6 +475,7 @@
     <script src="scripts/main.js"></script>
     <script src="scripts/index.js"></script>
     <script src="scripts/scroll.js"></script>
+    <script src="scripts/auth.js"></script>
 </body>
 
 </html>

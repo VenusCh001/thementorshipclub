@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Dashboard - The Mentorship Club</title>
+    <link rel="icon" href="./assets/icons/fav.png" type="image/png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header id="navbar">
+        <nav>
+            <div class="logo">
+                <span>The Mentorship Club</span>
+            </div>
+            <ul class="mobile-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about-us">About Us</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="previouswork.html">Previous Work</a></li>
+                <li><a href="announcement.html">Announcements</a></li>
+                <li><a href="index.html#team">Mentors</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li id="nav-li-profile">
+                    <a href="#" id="profile-icon">
+                        <i class="fas fa-user-circle"></i> 
+                    </a>
+                </li>
+                <li id="nav-li-logout">
+                    <a href="#" id="logout-button" class="btn-nav btn-nav-secondary">Logout</a>
+                </li>
+            </ul>
+            <i class="fas fa-moon" id="theme-toggle"></i>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <h3 id="user-name">Loading...</h3>
+                <p class="user-role">Mentor</p>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#profile-section" class="nav-item active">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="#apply-section" class="nav-item">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Apply as Mentor</span>
+                </a>
+                <a href="#applications-section" class="nav-item">
+                    <i class="fas fa-list"></i>
+                    <span>My Applications</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Mobile Sidebar Toggle -->
+            <button class="sidebar-toggle-btn" id="sidebar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <!-- Profile Section -->
+            <section id="profile-section" class="dashboard-section active">
+                <div class="section-header">
+                    <h2><i class="fas fa-user"></i> My Profile</h2>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-info">
+                        <div class="info-row">
+                            <label>Full Name:</label>
+                            <span id="profile-name">Loading...</span>
+                        </div>
+                        <div class="info-row">
+                            <label>Email:</label>
+                            <span id="profile-email">Loading...</span>
+                        </div>
+                        <div class="info-row">
+                            <label>Role:</label>
+                            <span id="profile-role">Mentor</span>
+                        </div>
+                        <div class="info-row">
+                            <label>Member Since:</label>
+                            <span id="profile-date">Loading...</span>
+                        </div>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="btn btn-primary" id="edit-profile-btn">
+                            <span><i class="fas fa-edit"></i> Edit Profile</span>
+                        </button>
+                        <button class="btn btn-secondary" id="logout-btn">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Apply as Mentor Section -->
+            <section id="apply-section" class="dashboard-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-paper-plane"></i> Apply to Become a Mentor</h2>
+                    <p class="section-subtitle">Share your expertise and guide the next generation</p>
+                </div>
+                <div class="application-form-card">
+                    <form id="mentor-application-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="program-name">Program Name <span class="required">*</span></label>
+                                <select id="program-name" required>
+                                    <option value="">Select a program</option>
+                                    <option value="Summer Web Dev Cohort">Summer Web Dev Cohort</option>
+                                    <option value="AI/ML Bootcamp">AI/ML Bootcamp</option>
+                                    <option value="Blockchain Mentorship">Blockchain Mentorship</option>
+                                    <option value="Data Structures & CP">Data Structures & CP</option>
+                                    <option value="Full Stack Development">Full Stack Development</option>
+                                    <option value="AR/VR/XR Development">AR/VR/XR Development</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="expertise-level">Expertise Level <span class="required">*</span></label>
+                                <select id="expertise-level" required>
+                                    <option value="">Select your level</option>
+                                    <option value="Industry Professional">Industry Professional</option>
+                                    <option value="Senior Developer">Senior Developer</option>
+                                    <option value="Tech Lead">Tech Lead</option>
+                                    <option value="Subject Matter Expert">Subject Matter Expert</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="experience">Professional Experience <span class="required">*</span></label>
+                            <textarea id="experience" rows="4" required placeholder="Describe your professional background, current role, and years of experience..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="expertise">Areas of Expertise <span class="required">*</span></label>
+                            <textarea id="expertise" rows="4" required placeholder="List your technical skills, specializations, and domains of expertise..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="motivation">Why do you want to mentor? <span class="required">*</span></label>
+                            <textarea id="motivation" rows="3" required placeholder="Share your motivation for becoming a mentor..."></textarea>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="availability">Time Commitment (hours/week) <span class="required">*</span></label>
+                                <input type="number" id="availability" min="1" max="20" required placeholder="e.g., 5">
+                            </div>
+                            <div class="form-group">
+                                <label for="start-date">Available From <span class="required">*</span></label>
+                                <input type="date" id="start-date" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="linkedin">LinkedIn Profile URL</label>
+                            <input type="url" id="linkedin" placeholder="https://www.linkedin.com/in/yourprofile">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="portfolio">Portfolio/GitHub URL</label>
+                            <input type="url" id="portfolio" placeholder="https://github.com/yourusername">
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <span><i class="fas fa-edit"></i>Submit Application</span>
+                            </button>
+                            <button type="reset" class="btn btn-secondary">
+                                <i class="fas fa-redo"></i> Reset Form
+                            </button>
+                        </div>
+
+                        <div id="form-message" class="form-message"></div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- My Applications Section -->
+            <section id="applications-section" class="dashboard-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-list"></i> My Mentor Applications</h2>
+                    <p class="section-subtitle">Track the status of your mentor applications</p>
+                </div>
+                <div class="applications-container" id="applications-list">
+                    <!-- Applications will be loaded here dynamically -->
+                    <div class="loading-state">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Loading your applications...</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/dashboard.js"></script>
+    <script src="scripts/mentor-dashboard.js"></script>
+</body>
+
+</html>

@@ -215,8 +215,29 @@ nav ul li a.btn-nav-primary:hover {
     transform: translateY(-2px);
 }
 
+nav ul li a.btn-nav-secondary {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 0.4rem 1.2rem; /* Smaller padding for logout button */
+}
+
+nav ul li a.btn-nav-secondary:hover {
+    background: var(--primary-color);
+    color: white !important;
+    transform: translateY(-2px);
+}
+
 nav ul {
     align-items: center;
+}
+
+nav ul li a#profile-icon {
+    font-size: 1.5rem;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
 }
 
 @media (max-width: 768px) {
@@ -1313,4 +1334,3 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
-

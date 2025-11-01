@@ -2,7 +2,82 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Get the auth service and db from the main.js-initialized app
     const auth = firebase.auth();
-    const db = firebase.firestore(); // Initialize Firestore
+    const db = firebase.firestore();
+
+    // --- Auth State Observer (Profile Icon Visibility) ---
+    auth.onAuthStateChanged(async (user) => {
+        const loginNav = document.getElementById('nav-li-login');
+        const logoutNav = document.getElementById('nav-li-logout');
+        const profileNav = document.getElementById('nav-li-profile');
+
+        if (user) {
+            // User is logged in
+            if (loginNav) loginNav.classList.add('nav-hidden');
+            if (logoutNav) logoutNav.classList.remove('nav-hidden');
+            if (profileNav) profileNav.classList.remove('nav-hidden');
+
+            // Setup profile icon click handler
+            setupProfileIconHandler(user);
+        } else {
+            // User is logged out
+            if (loginNav) loginNav.classList.remove('nav-hidden');
+            if (logoutNav) logoutNav.classList.add('nav-hidden');
+            if (profileNav) profileNav.classList.add('nav-hidden');
+        }
+    });
+
+    // Setup profile icon click handler
+    async function setupProfileIconHandler(user) {
+        const profileIcon = document.getElementById('profile-icon');
+        if (!profileIcon) return;
+
+        profileIcon.addEventListener('click', async (e) => {
+            e.preventDefault();
+            
+            try {
+                // Get user role from Firestore
+                const userDoc = await db.collection('users').doc(user.uid).get();
+                
+                if (userDoc.exists) {
+                    const userData = userDoc.data();
+                    const role = userData.role;
+
+                    // Redirect based on role
+                    if (role === 'mentee') {
+                        window.location.href = 'mentee-dashboard.html';
+                    } else if (role === 'mentor') {
+                        window.location.href = 'mentor-dashboard.html';
+                    } else {
+                        console.error('Unknown role:', role);
+                        alert('Unable to determine user role. Please contact support.');
+                    }
+                } else {
+                    console.error('User document not found');
+                    alert('User profile not found. Please contact support.');
+                }
+            } catch (error) {
+                console.error('Error fetching user role:', error);
+                alert('Failed to load profile. Please try again.');
+            }
+        });
+    }
+
+    // --- Logout Handler ---
+    const logoutButton = document.getElementById('logout-button');
+    if (logoutButton) {
+        logoutButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            auth.signOut()
+                .then(() => {
+                    window.location.href = 'index.html';
+                })
+                .catch((error) => {
+                    console.error('Logout error:', error);
+                    alert('Failed to logout. Please try again.');
+                });
+        });
+    }
 
     // --- Login Form Logic ---
     const loginForm = document.getElementById('login-form');
@@ -37,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Sign Up Form Logic (UPDATED) ---
+    // --- Sign Up Form Logic ---
     const signupForm = document.getElementById('signup-form');
     if (signupForm) {
         const successMsg = document.getElementById('success-message');

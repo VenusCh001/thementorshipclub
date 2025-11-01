@@ -3,12 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // === 1. FIREBASE INITIALIZATION ===
     // TODO: Paste your Firebase Configuration snippet here
     const firebaseConfig = {
-        apiKey: "AIzaSyCBZ9ot3zHJ4fr5S0ABuSGad3xqfGRwvf4",
-        authDomain: "tmc-test-d7cf3.firebaseapp.com",
-        projectId: "tmc-test-d7cf3",
-        storageBucket: "tmc-test-d7cf3.firebasestorage.app",
-        messagingSenderId: "663210288673",
-        appId: "1:663210288673:web:d50a3b1467370ca7ca2560"
+        apiKey: "AIzaSyCn2doe6FIkQa72fqxS3sUztVBlGMELjPU",
+        authDomain: "the-mentorship-club.firebaseapp.com",
+        projectId: "the-mentorship-club",
+        storageBucket: "the-mentorship-club.firebasestorage.app",
+        messagingSenderId: "751166513169",
+        appId: "1:751166513169:web:fe846f547d51bb6fc591b0",
+        measurementId: "G-4KPYJYTL71"
     };
     // Initialize Firebase
     if (firebase.apps.length === 0) {
@@ -59,5 +60,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error('Sign out error:', error);
             });
         });
+    }
+
+    // Dark/Light mode toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        if (body.classList.contains('dark-mode')) {
+            themeToggle.classList.remove('fa-moon');
+            themeToggle.classList.add('fa-sun');
+            localStorage.setItem('theme', 'dark-mode');
+        } else {
+            themeToggle.classList.remove('fa-sun');
+            themeToggle.classList.add('fa-moon');
+            localStorage.removeItem('theme');
+        }
+    });
+
+    // Check for saved theme in localStorage
+    if (localStorage.getItem('theme') === 'dark-mode') {
+        body.classList.add('dark-mode');
+        themeToggle.classList.remove('fa-moon');
+        themeToggle.classList.add('fa-sun');
     }
 });

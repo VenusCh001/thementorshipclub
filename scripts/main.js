@@ -86,3 +86,19 @@ document.addEventListener('DOMContentLoaded', () => {
         themeToggle.classList.add('fa-sun');
     }
 });
+
+
+
+ 
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+
+    // Keep preloader for around 2.5 seconds
+    setTimeout(() => {
+      preloader.classList.add("fade-out");
+      // Hide completely after fade-out transition
+      setTimeout(() => preloader.style.display = "none", 400);
+    }, 2500);
+  });
+
+

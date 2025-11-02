@@ -4,36 +4,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const auth = firebase.auth();
     const db = firebase.firestore();
 
-    // --- Auth State Observer (Profile Icon Visibility) ---
-    auth.onAuthStateChanged(async (user) => {
-        const loginNav = document.getElementById('nav-li-login');
-        const logoutNav = document.getElementById('nav-li-logout');
-        const profileNav = document.getElementById('nav-li-profile');
-
-        if (user) {
-            // User is logged in
-            if (loginNav) loginNav.classList.add('nav-hidden');
-            if (logoutNav) logoutNav.classList.remove('nav-hidden');
-            if (profileNav) profileNav.classList.remove('nav-hidden');
-
-            // Setup profile icon click handler
-            setupProfileIconHandler(user);
-        } else {
-            // User is logged out
-            if (loginNav) loginNav.classList.remove('nav-hidden');
-            if (logoutNav) logoutNav.classList.add('nav-hidden');
-            if (profileNav) profileNav.classList.add('nav-hidden');
-        }
-    });
+    auth.onAuthStateChanged(user => user && setupProfileIconHandler(user));
 
     // Setup profile icon click handler
     async function setupProfileIconHandler(user) {
         const profileIcon = document.getElementById('profile-icon');
         if (!profileIcon) return;
-
-        profileIcon.addEventListener('click', async (e) => {
+    
+        const newProfileIcon = profileIcon.cloneNode(true);
+        profileIcon.parentNode.replaceChild(newProfileIcon, profileIcon);
+        
+        newProfileIcon.addEventListener('click', async (e) => {
             e.preventDefault();
             
+            // Add a visual indicator that something is happening
+            newProfileIcon.style.opacity = '0.6';
             try {
                 // Get user role from Firestore
                 const userDoc = await db.collection('users').doc(user.uid).get();
@@ -58,6 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
             } catch (error) {
                 console.error('Error fetching user role:', error);
                 alert('Failed to load profile. Please try again.');
+            } finally {
+                newProfileIcon.style.opacity = '1';
             }
         });
     }

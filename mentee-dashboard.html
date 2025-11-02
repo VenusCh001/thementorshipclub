@@ -16,11 +16,22 @@
 
 <body>
     <header id="navbar">
-        <nav>
+        <nav class="auth-loading">
             <div class="logo">
                 <span>The Mentorship Club</span>
             </div>
-            <ul class="mobile-nav">
+            <ul class="nav-links">
+                <li id="nav-li-profile" class="nav-hidden">
+                    <a href="#" id="profile-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </a>
+                </li>
+                <li id="nav-li-login" class="nav-hidden">
+                    <a href="login.html" class="btn-nav btn-nav-primary">Login</a>
+                </li>
+                <li id="nav-li-signup" class="nav-hidden">
+                    <a href="signup.html" class="btn-nav btn-nav-secondary">Sign Up</a>
+                </li>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#about-us">About Us</a></li>
                 <li><a href="index.html#services">Services</a></li>
@@ -29,14 +40,6 @@
                 <li><a href="announcement.html">Announcements</a></li>
                 <li><a href="index.html#team">Mentors</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
-                <li id="nav-li-profile">
-                    <a href="#" id="profile-icon">
-                        <i class="fas fa-user-circle"></i>
-                    </a>
-                </li>
-                <li id="nav-li-logout">
-                    <a href="#" id="logout-button" class="btn-nav btn-nav-secondary">Logout</a>
-                </li>
             </ul>
             <i class="fas fa-moon" id="theme-toggle"></i>
             <div class="mobile-menu">
@@ -207,6 +210,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="scripts/main.js"></script>
+    <script src="scripts/auth.js"></script>
     <script src="scripts/dashboard.js"></script>
     <script src="scripts/mentee-dashboard.js"></script>
 </body>

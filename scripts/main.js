@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const navLogin = document.getElementById('nav-li-login');
     const navSignup = document.getElementById('nav-li-signup');
-    const navLogout = document.getElementById('nav-li-logout');
     const navProfile = document.getElementById('nav-li-profile');
+    const nav = document.querySelector('nav');
 
     auth.onAuthStateChanged(user => {
         if (user) {
@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
             // Hide "Login" and "Sign Up", Show "Profile"
             if (navLogin) navLogin.classList.add('nav-hidden');
             if (navSignup) navSignup.classList.add('nav-hidden');
-            if (navLogout) navLogout.classList.add('nav-hidden'); // Hide logout button
             if (navProfile) navProfile.classList.remove('nav-hidden'); // Show profile icon
 
         } else {
@@ -40,8 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // Show "Login" and "Sign Up", Hide "Logout"
             if (navLogin) navLogin.classList.remove('nav-hidden');
             if (navSignup) navSignup.classList.remove('nav-hidden');
-            if (navLogout) navLogout.classList.add('nav-hidden'); // Keep logout hidden
             if (navProfile) navProfile.classList.add('nav-hidden'); // Hide profile icon
+        }
+        if (nav) {
+            nav.classList.remove('auth-loading');
         }
     });
 

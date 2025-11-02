@@ -49,23 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Logout Handler ---
-    const logoutButton = document.getElementById('logout-button');
-    if (logoutButton) {
-        logoutButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            
-            auth.signOut()
-                .then(() => {
-                    window.location.href = 'index.html';
-                })
-                .catch((error) => {
-                    console.error('Logout error:', error);
-                    alert('Failed to logout. Please try again.');
-                });
-        });
-    }
-
     // --- Login Form Logic ---
     const loginForm = document.getElementById('login-form');
     if (loginForm) {

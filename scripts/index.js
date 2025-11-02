@@ -47,16 +47,16 @@ document.querySelector('.contact-form').addEventListener('submit', (e) => {
 
 // Mobile menu toggle
 const mobileMenu = document.querySelector('.mobile-menu');
-const navLinks = document.querySelector('.nav-links');
+const navLinks = document.querySelector('.mobile-nav');
 
 mobileMenu.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     mobileMenu.classList.toggle('open');
 });
 
-document.querySelectorAll('.nav-links a').forEach(link => {
+document.querySelectorAll('.mobile-nav a').forEach(link => {
     link.addEventListener('click', () => {
-        if (navLinks.classList.contains('active')) navLinks.classList.remove('active');
+        navLinks.classList.remove('active');
         mobileMenu.classList.remove('open');
     });
 });

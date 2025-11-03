@@ -1924,7 +1924,7 @@ footer {
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
 }
 
 #preloader.fade-out {
@@ -1935,7 +1935,8 @@ footer {
 #loader-logo {
   width: 90px;
   height: 90px;
-  animation: spin 2s linear infinite;
+  animation:  2s linear infinite;
+  
 }
 
 #loader-text {
@@ -1944,11 +1945,6 @@ footer {
   color: #444;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
 }
 
 

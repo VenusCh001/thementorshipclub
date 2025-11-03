@@ -231,3 +231,14 @@ document.querySelectorAll('.mobile-nav a').forEach(link => {
     yearSpan.textContent = new Date().getFullYear();
     }
 })();
+
+const faqs = document.querySelectorAll(".faq-item");
+
+  faqs.forEach((faq) => {
+    faq.querySelector(".faq-question").addEventListener("click", () => {
+      faq.classList.toggle("active");
+      faqs.forEach((other) => {
+        if (other !== faq) other.classList.remove("active");
+      });
+    });
+  });

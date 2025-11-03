@@ -17,11 +17,11 @@ Welcome to the Mentorship Club website! This platform is designed to connect men
 | Category | Issue Title | Description |
 |-----------|-------------|-------------|
 | **Mentor Features** | Mentor of the Month Feature | Spotlight one mentor each month with their bio and achievements. |
-
- | **Mentee Features** | Mentorship Reflection Journal | A page for mentees to record their growth and reflections. |
-|  | Feedback Page | Mentees and mentors can share feedback and experiences. |
-
-| **Overall Features** | Fun Mentorship Fact Popup | Random mentorship quotes or trivia on each visit. | | Hidden “Mentor Mode” Easter Egg | Unlockable fun theme or quote for mentors.| Take a break feature | Pop up box appearing on the basis of screen time of website.|
+| **Mentee Features** | Mentorship Reflection Journal | A page for mentees to record their growth and reflections. |
+|  **Mentee Features** | Feedback Page | Mentees and mentors can share feedback and experiences. |
+| **Overall Features** | Fun Mentorship Fact Popup | Random mentorship quotes or trivia on each visit. | 
+| **Overall Features** | Hidden “Mentor Mode” Easter Egg | Unlockable fun theme or quote for mentors.| 
+| **Overall Features** | Take a break feature | Pop up box appearing on the basis of screen time of website.|
 
 ## 📝 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

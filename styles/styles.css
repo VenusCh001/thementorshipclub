@@ -1222,6 +1222,343 @@ nav .nav-links li a:hover {
     margin-bottom: 1.5rem;
 }
 
+/* GET STARTED SECTION */
+.get-started {
+  margin-bottom: 0;
+  text-align: center;
+  padding: 80px 20px 50px;
+  background: linear-gradient(180deg, #fff1eb 0%, #e0f7fa 100%);
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Headings */
+.get-started h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff5722;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .get-started {
+  background: linear-gradient(180deg, #2c2c2c 0%, #3a3a3a 100%);
+}
+
+body.dark-mode .get-started h2 {
+  color: #ffd8c9; 
+}
+
+.get-started h2 span {
+  color: #ff5722;
+}
+
+.get-started .subtitle {
+  color: #555;
+  margin-bottom: 50px;
+  font-size: 1rem;
+}
+
+/* TIMELINE CONTAINER */
+.timeline {
+  position: relative;
+  list-style: none;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* CENTER LINE */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: linear-gradient(180deg, #ff5722, #ff7043, #ec4899);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* === EACH TIMELINE ITEM === */
+.timeline li {
+  position: relative;
+  width: 50%;
+  padding: 40px 50px;
+  box-sizing: border-box;
+}
+
+/* === SIDE ALIGNMENT === */
+.direction-l {
+  float: left;
+  text-align: left;
+}
+
+.direction-r {
+  float: right;
+  text-align: left;
+}
+
+/* === CLEAR FLOATS === */
+.timeline::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* === FLAG WRAPPER === */
+.flag-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.direction-l .flag-wrapper {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+/* === ICON FOR TIMELINE=== */
+.hexa {
+  position: relative;
+  width: 70px;
+  height: 40px;
+  background: linear-gradient(135deg, #ff5722, #ff7043, #ec4899);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(255, 87, 34, 0.25);
+}
+
+.hexa img {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: brightness(0) invert(1);
+}
+
+/* === TEXT BLOCK === */
+.flag {
+  background: #fff;
+  padding: 10px 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(255, 87, 34, 0.15);
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.desc {
+  background: #fff;
+  padding: 15px 18px;
+  margin-top: 10px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(255, 87, 34, 0.1);
+  line-height: 1.6;
+  color: #444;
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* === ALIGN HEXA TO CENTER LINE === */
+.direction-l .hexa {
+  margin-right: -38px;
+}
+
+.direction-r .hexa {
+  margin-left: -38px;
+}
+
+/* === IMPROVED ZIG-ZAG LAYOUT === */
+.timeline li.direction-l {
+  margin-top: 60px;
+}
+
+.timeline li.direction-r {
+  margin-top: 120px;
+}
+
+/* Slight fine-tuning for a smooth step look */
+.timeline li:nth-child(1).direction-l { margin-top: 0; }
+.timeline li:nth-child(2).direction-r { margin-top: 80px; }
+.timeline li:nth-child(3).direction-l { margin-top: 80px; }
+.timeline li:nth-child(4).direction-r { margin-top: 80px; }
+
+
+/* === HOVER EFFECTS (new polish) === */
+.timeline li:hover .flag,
+.timeline li:hover .desc {
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.2);
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 900px) {
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timeline li {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    margin-top: 40px !important;
+    margin-bottom: 40px;
+  }
+
+  .direction-l,
+  .direction-r {
+    float: none;
+    text-align: left;
+  }
+
+  .direction-l .flag-wrapper {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .direction-l .hexa,
+  .direction-r .hexa {
+    margin: 0;
+  }
+
+  .desc {
+    text-align: left;
+  }
+}
+
+
+
+/* --- Join Button --- */
+.join-btn {
+  background: linear-gradient(90deg, #ff5722, #ff7043, #ec4899);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 14px 40px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(255, 87, 34, 0.3);
+}
+
+.join-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 87, 34, 0.4);
+}
+
+body.dark-mode .join-btn {
+  color: #fffaf8;
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4);
+}
+
+/*FAQ SECTION*/
+.faq-section {
+  background: #fff1eb;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.faq-section h2 {
+  font-size: 2rem;
+  color: #ff5722;
+  margin-bottom: 10px;
+}
+
+body.dark-mode .faq-section {
+  background: #2c2c2c;
+}
+
+body.dark-mode .faq-section h2 {
+  color: #ffd8c9;
+}
+
+.faq-intro {
+  color: #555;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+/* FAQ Items */
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq-item {
+  background: white;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(255, 87, 34, 0.1);
+  overflow: hidden;
+}
+
+body.dark-mode .faq-item {
+  background: #3a3a3a;
+  color: #f5f5f5;
+}
+
+/* FAQ Question */
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ff5722;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question:hover {
+  background: #ffd8c9;
+}
+
+body.dark-mode .faq-question {
+  color: #ffbfa9;
+}
+
+body.dark-mode .faq-question:hover {
+  background: #444;
+}
+
+/* FAQ Answers */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  background: #fffaf8;
+  padding: 0 20px;
+}
+
+.faq-answer p {
+  margin: 15px 0;
+  color: #444;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding-bottom: 20px;
+}
+
+body.dark-mode .faq-answer p {
+  color: black;
+}
+
+/* GENERAL DARK MODE FALLBACKS*/
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+  color: #ffd8c9;
+}
+
 .social-icons {
     display: flex;
     gap: 1rem;
@@ -1932,3 +2269,45 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
+
+/* =====================
+   PRELOADER STYLES
+===================== */
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+#preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#loader-logo {
+  width: 90px;
+  height: 90px;
+  animation:  2s linear infinite;
+  
+}
+
+#loader-text {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  color: #444;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+

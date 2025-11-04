@@ -19,23 +19,24 @@
 <body>
     <!-- Navbar -->
     <header id="navbar">
-        <nav>
+        <nav class="auth-loading">
             <div class="logo">
                 <span>The Mentorship Club</span>
             </div>
-             <ul class="mobile-nav">
+             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#about-us">About Us</a></li>
                 <li><a href="index.html#services">Services</a></li>
                 <li><a href="resources.html">Resources</a></li>
-                <li><a href="./previouswork.html">Previous Work</a></li>
-                <li><a href="./announcement.html">Announcements</a></li>
+                <li><a href="previouswork.html">Previous Work</a></li>
+                <li><a href="announcement.html">Announcements</a></li>
                 <li><a href="index.html#team">Mentors</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
-                <li id="nav-li-login"><a href="login.html" class="btn-nav btn-nav-primary">Login</a></li>
-                <li id="nav-li-logout" class="nav-hidden">
-                    <a href="#" id="logout-button" class="btn-nav btn-nav-primary">Logout</a>
+                <li id="nav-li-profile" class="nav-hidden">
+                    <a href="#" id="profile-icon"><i class="fas fa-user-circle"></i></a>
                 </li>
+                <li id="nav-li-login" class=""><a href="login.html" class="btn-nav btn-nav-primary">Login</a></li>
+                <li id="nav-li-signup" class=""><a href="signup.html" class="btn-nav btn-nav-secondary">Sign Up</a></li>
             </ul>
             <i class="fas fa-moon" id="theme-toggle"></i>
             <div class="mobile-menu">
@@ -208,6 +209,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 
     <script src="scripts/main.js"></script>
+    <script src="scripts/auth.js"></script>
     <script src="scripts/resources.js"></script>
 </body>
 

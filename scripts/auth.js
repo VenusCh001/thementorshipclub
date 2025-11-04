@@ -2,7 +2,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Get the auth service and db from the main.js-initialized app
     const auth = firebase.auth();
-    const db = firebase.firestore(); // Initialize Firestore
+    const db = firebase.firestore();
+
+    auth.onAuthStateChanged(user => user && setupProfileIconHandler(user));
+
+    // Setup profile icon click handler
+    async function setupProfileIconHandler(user) {
+        const profileIcon = document.getElementById('profile-icon');
+        if (!profileIcon) return;
+    
+        const newProfileIcon = profileIcon.cloneNode(true);
+        profileIcon.parentNode.replaceChild(newProfileIcon, profileIcon);
+        
+        newProfileIcon.addEventListener('click', async (e) => {
+            e.preventDefault();
+            
+            // Add a visual indicator that something is happening
+            newProfileIcon.style.opacity = '0.6';
+            try {
+                // Get user role from Firestore
+                const userDoc = await db.collection('users').doc(user.uid).get();
+                
+                if (userDoc.exists) {
+                    const userData = userDoc.data();
+                    const role = userData.role;
+
+                    // Redirect based on role
+                    if (role === 'mentee') {
+                        window.location.href = 'mentee-dashboard.html';
+                    } else if (role === 'mentor') {
+                        window.location.href = 'mentor-dashboard.html';
+                    } else {
+                        console.error('Unknown role:', role);
+                        alert('Unable to determine user role. Please contact support.');
+                    }
+                } else {
+                    console.error('User document not found');
+                    alert('User profile not found. Please contact support.');
+                }
+            } catch (error) {
+                console.error('Error fetching user role:', error);
+                alert('Failed to load profile. Please try again.');
+            } finally {
+                newProfileIcon.style.opacity = '1';
+            }
+        });
+    }
 
     // --- Login Form Logic ---
     const loginForm = document.getElementById('login-form');
@@ -37,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Sign Up Form Logic (UPDATED) ---
+    // --- Sign Up Form Logic ---
     const signupForm = document.getElementById('signup-form');
     if (signupForm) {
         const successMsg = document.getElementById('success-message');

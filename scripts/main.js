@@ -89,16 +89,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
- 
-  window.addEventListener("load", () => {
+
+window.addEventListener("load", () => {
     const preloader = document.getElementById("preloader");
 
     // Keep preloader for around 2.5 seconds
     setTimeout(() => {
-      preloader.classList.add("fade-out");
-      // Hide completely after fade-out transition
-      setTimeout(() => preloader.style.display = "none", 400);
+        preloader.classList.add("fade-out");
+        // Hide completely after fade-out transition
+        setTimeout(() => preloader.style.display = "none", 400);
     }, 2500);
-  });
+});
 
+const bell = document.querySelector(".notification");
+const badge = bell.querySelector(".badge");
+
+// Initially pulse
+badge.classList.add("pulse");
+
+// Toggle “read” simulation on click
+bell.addEventListener("click", () => {
+    badge.classList.toggle("hidden"); // hides the badge
+});
 

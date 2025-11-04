@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - The Mentorship Club</title>
+    <link rel="icon" href="./assets/icons/fav.png" type="image/png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header id="navbar">
+        <nav>
+            <div class="logo">
+                <span>The Mentorship Club</span>
+            </div>
+            <ul class="mobile-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="admin.html">Admin Dashboard</a></li>
+                <li id="nav-li-logout" class="nav-hidden">
+                    <a href="#" id="logout-button" class="btn-nav btn-nav-primary">Logout</a>
+                </li>
+            </ul>
+            <i class="fas fa-moon" id="theme-toggle"></i>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="admin-hero">
+        <h1>Admin Dashboard</h1>
+        <p>Review pending applications for mentors and mentees.</p>
+    </section>
+
+    <main class="admin-container">
+        <div id="loading-message">
+            <p>Loading applications...</p>
+        </div>
+
+        <div id="application-sections" style="display: none;">
+            <section class="application-list">
+                <h2>Pending Mentee Applications</h2>
+                <ul id="mentee-applications-list">
+                    </ul>
+                <p id="no-mentees" class="empty-message" style="display: none;">No pending mentee applications.</p>
+            </section>
+
+            <section class="application-list">
+                <h2>Pending Mentor Applications</h2>
+                <ul id="mentor-applications-list">
+                    </ul>
+                <p id="no-mentors" class="empty-message" style="display: none;">No pending mentor applications.</p>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    
+    <script src="scripts/main.js"></script>
+    <script src="scripts/admin.js"></script>
+</body>
+
+</html>

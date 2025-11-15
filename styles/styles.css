@@ -1534,7 +1534,8 @@ body.dark-mode .faq-question:hover {
   max-height: 0;
   overflow: hidden;
   transition: all 0.4s ease;
-  background: #fffaf8;
+  /* background: #fffaf8; */
+  background: var(--light-bg); 
   padding: 0 20px;
 }
 
@@ -1549,7 +1550,11 @@ body.dark-mode .faq-question:hover {
 }
 
 body.dark-mode .faq-answer p {
-  color: black;
+  color: var(--text-dark);  
+}
+
+body.dark-mode .faq-answer {
+  background: var(--card-bg); 
 }
 
 /* GENERAL DARK MODE FALLBACKS*/

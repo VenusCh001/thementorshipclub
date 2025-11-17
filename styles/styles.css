@@ -2309,5 +2309,33 @@ footer {
   font-weight: 500;
   font-family: "Poppins", sans-serif;
 }
+/* Dark mode for roadmap section */
+.dark .roadmap-section {
+  background-color: var(--card-bg); /* matches site's dark card bg */
+  color: var(--text-dark); /* readable text */
+  padding: 20px;
+}
 
+/* Dark cards inside roadmap */
+.dark .roadmap-section .roadmap-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-dark);
+  padding: 15px;
+  border-radius: 6px;
+}
+
+/* All headings, paragraphs, list items inside cards */
+.dark .roadmap-section .roadmap-card h3,
+.dark .roadmap-section .roadmap-card p,
+.dark .roadmap-section .roadmap-card li,
+.dark .roadmap-section .roadmap-card span {
+  color: var(--text-dark);
+}
+
+/* Highlight "Choose your growth path" line */
+.dark .roadmap-section .section-subtitle {
+  color: #ffcc00; /* bright yellow */
+  font-weight: bold;
+}
 
